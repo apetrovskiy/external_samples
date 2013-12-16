@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="NorthwindModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="NorthwindModelStoreContainer">
+          <EntitySet Name="Shippers" EntityType="NorthwindModel.Store.Shippers" store:Type="Tables" />
+        </EntityContainer>
+        <EntityType Name="Shippers">
+          <Key>
+            <PropertyRef Name="Shipper ID" />
+          </Key>
+          <Property Name="Shipper ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Company Name" Type="nvarchar" Nullable="false" MaxLength="40" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NorthwindModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="NorthwindContext" annotation:LazyLoadingEnabled="false">
+          <EntitySet Name="Shippers" EntityType="NorthwindModel.Shipper" />
+        </EntityContainer>
+        <EntityType Name="Shipper">
+          <Key>
+            <PropertyRef Name="Shipper_ID" />
+          </Key>
+          <Property Name="Shipper_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Company_Name" Type="String" Nullable="false" MaxLength="40" Unicode="true" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NorthwindModelStoreContainer" CdmEntityContainer="NorthwindContext">
+          <EntitySetMapping Name="Shippers">
+            <EntityTypeMapping TypeName="NorthwindModel.Shipper">
+              <MappingFragment StoreEntitySet="Shippers">
+                <ScalarProperty Name="Shipper_ID" ColumnName="Shipper ID" />
+                <ScalarProperty Name="Company_Name" ColumnName="Company Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Default" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

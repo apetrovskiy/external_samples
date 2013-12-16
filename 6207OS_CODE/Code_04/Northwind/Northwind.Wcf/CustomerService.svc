@@ -1,0 +1,4 @@
+﻿<%@ ServiceHost Language="C#" Debug="true"  
+    CodeBehind="CustomerService.svc.cs" 
+    Service="Northwind.Wcf.CustomerService"
+    Factory="Ninject.Extensions.Wcf.NinjectServiceHostFactory"%>

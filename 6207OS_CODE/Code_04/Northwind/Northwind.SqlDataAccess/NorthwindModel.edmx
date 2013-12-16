@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="NorthwindModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="NorthwindModelStoreContainer">
+          <EntitySet Name="Customers" EntityType="NorthwindModel.Store.Customers" store:Type="Tables" />
+        </EntityContainer>
+        <EntityType Name="Customers">
+          <Key>
+            <PropertyRef Name="Customer ID" />
+          </Key>
+          <Property Name="Customer ID" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="Company Name" Type="nvarchar" Nullable="false" MaxLength="40" />
+          <Property Name="Contact Name" Type="nvarchar" MaxLength="30" />
+          <Property Name="Contact Title" Type="nvarchar" MaxLength="30" />
+          <Property Name="Address" Type="nvarchar" MaxLength="60" />
+          <Property Name="City" Type="nvarchar" MaxLength="15" />
+          <Property Name="Region" Type="nvarchar" MaxLength="15" />
+          <Property Name="Postal Code" Type="nvarchar" MaxLength="10" />
+          <Property Name="Country" Type="nvarchar" MaxLength="15" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="24" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="24" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NorthwindModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="NorthwindEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Customers" EntityType="NorthwindModel.Customer" />
+        </EntityContainer>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="Customer_ID" />
+          </Key>
+          <Property Name="Customer_ID" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="Company_Name" Type="String" Nullable="false" MaxLength="40" Unicode="true" FixedLength="false" />
+          <Property Name="City" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="Postal_Code" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" MaxLength="24" Unicode="true" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NorthwindModelStoreContainer" CdmEntityContainer="NorthwindEntities">
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="NorthwindModel.Customer">
+              <MappingFragment StoreEntitySet="Customers">
+                <ScalarProperty Name="Customer_ID" ColumnName="Customer ID" />
+                <ScalarProperty Name="Company_Name" ColumnName="Company Name" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Postal_Code" ColumnName="Postal Code" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Default" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
