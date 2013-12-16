@@ -1,9 +1,0 @@
-C:\Projects\samples\Sample.Freezable.1\Sample.Freezable\bin\Debug\Sample.Freezable.exe
-C:\Projects\samples\Sample.Freezable.1\Sample.Freezable\bin\Debug\Sample.Freezable.pdb
-C:\Projects\samples\Sample.Freezable.1\Sample.Freezable\bin\Debug\Castle.Core.dll
-C:\Projects\samples\Sample.Freezable.1\Sample.Freezable\bin\Debug\xunit.dll
-C:\Projects\samples\Sample.Freezable.1\Sample.Freezable\bin\Debug\xunit.xml
-C:\Projects\samples\Sample.Freezable.1\Sample.Freezable\bin\Debug\Castle.Core.xml
-C:\Projects\samples\Sample.Freezable.1\Sample.Freezable\obj\Debug\ResolveAssemblyReference.cache
-C:\Projects\samples\Sample.Freezable.1\Sample.Freezable\obj\Debug\Sample.Freezable.exe
-C:\Projects\samples\Sample.Freezable.1\Sample.Freezable\obj\Debug\Sample.Freezable.pdb

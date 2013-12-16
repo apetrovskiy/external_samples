@@ -1,0 +1,8 @@
+C:\Projects\samples\6207OS_CODE\Code_05\Northwind_Interception\Northwind.Wpf\obj\Debug\Northwind.Wpf.csprojResolveAssemblyReference.cache
+C:\Projects\samples\6207OS_CODE\Code_05\Northwind_Interception\Northwind.Wpf\obj\Debug\Views\MainWindow.baml
+C:\Projects\samples\6207OS_CODE\Code_05\Northwind_Interception\Northwind.Wpf\obj\Debug\Views\CustomerWindow.g.cs
+C:\Projects\samples\6207OS_CODE\Code_05\Northwind_Interception\Northwind.Wpf\obj\Debug\Views\MainWindow.g.cs
+C:\Projects\samples\6207OS_CODE\Code_05\Northwind_Interception\Northwind.Wpf\obj\Debug\App.g.cs
+C:\Projects\samples\6207OS_CODE\Code_05\Northwind_Interception\Northwind.Wpf\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Projects\samples\6207OS_CODE\Code_05\Northwind_Interception\Northwind.Wpf\obj\Debug\Northwind.Wpf_MarkupCompile.cache
+C:\Projects\samples\6207OS_CODE\Code_05\Northwind_Interception\Northwind.Wpf\obj\Debug\Northwind.Wpf_MarkupCompile.lref

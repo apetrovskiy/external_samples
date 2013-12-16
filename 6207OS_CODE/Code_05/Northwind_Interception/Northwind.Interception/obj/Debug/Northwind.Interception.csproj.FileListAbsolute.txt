@@ -1,0 +1,1 @@
+C:\Projects\samples\6207OS_CODE\Code_05\Northwind_Interception\Northwind.Interception\obj\Debug\Northwind.Interception.csprojResolveAssemblyReference.cache

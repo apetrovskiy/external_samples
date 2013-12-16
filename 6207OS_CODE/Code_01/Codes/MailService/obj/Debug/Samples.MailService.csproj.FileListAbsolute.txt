@@ -1,1 +1,0 @@
-C:\Projects\samples\6207OS_CODE\Code_01\Codes\MailService\bin\Debug\Samples.MailService.exe.config

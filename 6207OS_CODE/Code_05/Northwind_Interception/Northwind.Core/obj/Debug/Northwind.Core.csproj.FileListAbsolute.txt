@@ -1,0 +1,5 @@
+C:\Projects\samples\6207OS_CODE\Code_05\Northwind_Interception\Northwind.Core\bin\Debug\Northwind.Core.dll
+C:\Projects\samples\6207OS_CODE\Code_05\Northwind_Interception\Northwind.Core\bin\Debug\Northwind.Core.pdb
+C:\Projects\samples\6207OS_CODE\Code_05\Northwind_Interception\Northwind.Core\obj\Debug\Northwind.Core.csprojResolveAssemblyReference.cache
+C:\Projects\samples\6207OS_CODE\Code_05\Northwind_Interception\Northwind.Core\obj\Debug\Northwind.Core.dll
+C:\Projects\samples\6207OS_CODE\Code_05\Northwind_Interception\Northwind.Core\obj\Debug\Northwind.Core.pdb

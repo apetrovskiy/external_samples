@@ -1,0 +1,8 @@
+C:\Projects\samples\Remoting\Master EXE\bin\Debug\Master.exe
+C:\Projects\samples\Remoting\Master EXE\bin\Debug\Master.pdb
+C:\Projects\samples\Remoting\Master EXE\bin\Debug\Remoting.dll
+C:\Projects\samples\Remoting\Master EXE\obj\Debug\Master.csprojResolveAssemblyReference.cache
+C:\Projects\samples\Remoting\Master EXE\obj\Debug\Master.frmMain.resources
+C:\Projects\samples\Remoting\Master EXE\obj\Debug\Master.csproj.GenerateResource.Cache
+C:\Projects\samples\Remoting\Master EXE\obj\Debug\Master.exe
+C:\Projects\samples\Remoting\Master EXE\obj\Debug\Master.pdb

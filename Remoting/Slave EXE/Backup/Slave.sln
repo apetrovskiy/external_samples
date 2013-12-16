@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Slave", "Slave.csproj", "{D745716A-0278-48FB-87D4-CE7469E69195}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{D745716A-0278-48FB-87D4-CE7469E69195}.Debug.ActiveCfg = Release|.NET
+		{D745716A-0278-48FB-87D4-CE7469E69195}.Debug.Build.0 = Release|.NET
+		{D745716A-0278-48FB-87D4-CE7469E69195}.Release.ActiveCfg = Release|.NET
+		{D745716A-0278-48FB-87D4-CE7469E69195}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,8 @@
+C:\Projects\samples\6207OS_CODE\Code_05\Northwind_Interception\Northwind.SqlDataAccess\bin\Debug\Northwind.SqlDataAccess.dll.config
+C:\Projects\samples\6207OS_CODE\Code_05\Northwind_Interception\Northwind.SqlDataAccess\bin\Debug\Northwind.SqlDataAccess.dll
+C:\Projects\samples\6207OS_CODE\Code_05\Northwind_Interception\Northwind.SqlDataAccess\bin\Debug\Northwind.SqlDataAccess.pdb
+C:\Projects\samples\6207OS_CODE\Code_05\Northwind_Interception\Northwind.SqlDataAccess\bin\Debug\Northwind.Core.dll
+C:\Projects\samples\6207OS_CODE\Code_05\Northwind_Interception\Northwind.SqlDataAccess\bin\Debug\Northwind.Core.pdb
+C:\Projects\samples\6207OS_CODE\Code_05\Northwind_Interception\Northwind.SqlDataAccess\obj\Debug\Northwind.SqlDataAccess.csprojResolveAssemblyReference.cache
+C:\Projects\samples\6207OS_CODE\Code_05\Northwind_Interception\Northwind.SqlDataAccess\obj\Debug\Northwind.SqlDataAccess.dll
+C:\Projects\samples\6207OS_CODE\Code_05\Northwind_Interception\Northwind.SqlDataAccess\obj\Debug\Northwind.SqlDataAccess.pdb

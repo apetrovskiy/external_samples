@@ -1,0 +1,5 @@
+C:\Projects\samples\Remoting\Remoting DLL\bin\Debug\Remoting.dll
+C:\Projects\samples\Remoting\Remoting DLL\bin\Debug\Remoting.pdb
+C:\Projects\samples\Remoting\Remoting DLL\obj\Debug\Remoting.csprojResolveAssemblyReference.cache
+C:\Projects\samples\Remoting\Remoting DLL\obj\Debug\Remoting.dll
+C:\Projects\samples\Remoting\Remoting DLL\obj\Debug\Remoting.pdb

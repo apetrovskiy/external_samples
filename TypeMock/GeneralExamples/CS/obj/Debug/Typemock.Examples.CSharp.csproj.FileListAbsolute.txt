@@ -1,0 +1,8 @@
+C:\Projects\samples\TypeMock\GeneralExamples\CS\bin\Debug\Typemock.Examples.CSharp.dll
+C:\Projects\samples\TypeMock\GeneralExamples\CS\bin\Debug\Typemock.Examples.CSharp.pdb
+C:\Projects\samples\TypeMock\GeneralExamples\CS\bin\Debug\Typemock.ArrangeActAssert.dll
+C:\Projects\samples\TypeMock\GeneralExamples\CS\bin\Debug\TypeMock.dll
+C:\Projects\samples\TypeMock\GeneralExamples\CS\bin\Debug\Configuration.dll
+C:\Projects\samples\TypeMock\GeneralExamples\CS\obj\Debug\Typemock.Examples.CSharp.csprojResolveAssemblyReference.cache
+C:\Projects\samples\TypeMock\GeneralExamples\CS\obj\Debug\Typemock.Examples.CSharp.dll
+C:\Projects\samples\TypeMock\GeneralExamples\CS\obj\Debug\Typemock.Examples.CSharp.pdb

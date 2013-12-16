@@ -1,0 +1,8 @@
+C:\Projects\samples\specflow\testsp\bin\Debug\testsp.dll.config
+C:\Projects\samples\specflow\testsp\bin\Debug\testsp.dll
+C:\Projects\samples\specflow\testsp\bin\Debug\testsp.pdb
+C:\Projects\samples\specflow\testsp\bin\Debug\nunit.framework.dll
+C:\Projects\samples\specflow\testsp\bin\Debug\TechTalk.SpecFlow.dll
+C:\Projects\samples\specflow\testsp\obj\x86\Debug\testsp.csprojResolveAssemblyReference.cache
+C:\Projects\samples\specflow\testsp\obj\x86\Debug\testsp.dll
+C:\Projects\samples\specflow\testsp\obj\x86\Debug\testsp.pdb

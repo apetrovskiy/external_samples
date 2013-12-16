@@ -1,0 +1,8 @@
+C:\Projects\samples\Remoting\Slave EXE\bin\Debug\Slave.exe
+C:\Projects\samples\Remoting\Slave EXE\bin\Debug\Slave.pdb
+C:\Projects\samples\Remoting\Slave EXE\bin\Debug\Remoting.dll
+C:\Projects\samples\Remoting\Slave EXE\obj\Debug\Slave.csprojResolveAssemblyReference.cache
+C:\Projects\samples\Remoting\Slave EXE\obj\Debug\Slave.frmMain.resources
+C:\Projects\samples\Remoting\Slave EXE\obj\Debug\Slave.csproj.GenerateResource.Cache
+C:\Projects\samples\Remoting\Slave EXE\obj\Debug\Slave.exe
+C:\Projects\samples\Remoting\Slave EXE\obj\Debug\Slave.pdb
