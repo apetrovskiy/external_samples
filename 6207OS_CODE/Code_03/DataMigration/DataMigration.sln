@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataMigration.Console", "DataMigration\DataMigration.Console.csproj", "{39EBF738-1E01-4A07-AA56-47162BCBBCBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataMigration.SqlDataAccess", "DataMigration.SqlDataAccess\DataMigration.SqlDataAccess.csproj", "{B1794FA6-BA50-4E11-A408-0FAF61344B3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataMigration.Business", "DataMigration.Business\DataMigration.Business.csproj", "{ABBEBE89-39CC-4869-910E-D95CE6C8A7DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataMigration.XmlDataAccess", "DataMigration.XmlDataAccess\DataMigration.XmlDataAccess.csproj", "{602B7C9C-56C3-4BD2-9236-2ACABAA9F7CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39EBF738-1E01-4A07-AA56-47162BCBBCBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39EBF738-1E01-4A07-AA56-47162BCBBCBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39EBF738-1E01-4A07-AA56-47162BCBBCBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39EBF738-1E01-4A07-AA56-47162BCBBCBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1794FA6-BA50-4E11-A408-0FAF61344B3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1794FA6-BA50-4E11-A408-0FAF61344B3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1794FA6-BA50-4E11-A408-0FAF61344B3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1794FA6-BA50-4E11-A408-0FAF61344B3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABBEBE89-39CC-4869-910E-D95CE6C8A7DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABBEBE89-39CC-4869-910E-D95CE6C8A7DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABBEBE89-39CC-4869-910E-D95CE6C8A7DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABBEBE89-39CC-4869-910E-D95CE6C8A7DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{602B7C9C-56C3-4BD2-9236-2ACABAA9F7CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{602B7C9C-56C3-4BD2-9236-2ACABAA9F7CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{602B7C9C-56C3-4BD2-9236-2ACABAA9F7CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{602B7C9C-56C3-4BD2-9236-2ACABAA9F7CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

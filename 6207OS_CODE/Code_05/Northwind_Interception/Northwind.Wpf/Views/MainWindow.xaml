@@ -1,0 +1,13 @@
+﻿<Window x:Class="Northwind.Wpf.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        WindowStartupLocation="CenterScreen"
+       
+        Title="MainWindow" Width="599" Height="307">
+    <DockPanel>
+        <ToolBar DockPanel.Dock="Top">
+            <Button Command="{Binding CreateCustomerCommand}">Create</Button>
+        </ToolBar>
+        <DataGrid IsReadOnly="True" ItemsSource="{Binding Customers}"  GridLinesVisibility="None" />
+    </DockPanel>
+</Window>
