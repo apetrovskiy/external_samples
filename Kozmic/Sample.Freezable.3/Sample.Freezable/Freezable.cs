@@ -1,7 +1,6 @@
 namespace Sample.Freezable
 {
     using System.Collections.Generic;
-    using Castle.Core.Interceptor;
     using Castle.DynamicProxy;
 
     public static class Freezable

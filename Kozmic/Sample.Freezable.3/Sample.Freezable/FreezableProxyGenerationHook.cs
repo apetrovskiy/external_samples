@@ -10,13 +10,14 @@ namespace Sample.Freezable
         {
             return memberInfo.Name.StartsWith("set_", StringComparison.Ordinal);
         }
-
-        public void NonVirtualMemberNotification(Type type, MemberInfo memberInfo)
-        {
-        }
-
+        
         public void MethodsInspected()
         {
+        }
+        
+        public void NonProxyableMemberNotification(Type type, MemberInfo memberInfo)
+        {
+            
         }
     }
 }

@@ -1,0 +1,13 @@
+C:\Projects\samples\Kozmic\Sample.Freezable.4\Sample.Freezable\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\samples\Kozmic\Sample.Freezable.4\Sample.Freezable\bin\Debug\Sample.Freezable.exe
+C:\Projects\samples\Kozmic\Sample.Freezable.4\Sample.Freezable\bin\Debug\Sample.Freezable.pdb
+C:\Projects\samples\Kozmic\Sample.Freezable.4\Sample.Freezable\bin\Debug\Castle.Core.dll
+C:\Projects\samples\Kozmic\Sample.Freezable.4\Sample.Freezable\bin\Debug\Iesi.Collections.dll
+C:\Projects\samples\Kozmic\Sample.Freezable.4\Sample.Freezable\bin\Debug\NHibernate.dll
+C:\Projects\samples\Kozmic\Sample.Freezable.4\Sample.Freezable\bin\Debug\xunit.dll
+C:\Projects\samples\Kozmic\Sample.Freezable.4\Sample.Freezable\bin\Debug\xunit.xml
+C:\Projects\samples\Kozmic\Sample.Freezable.4\Sample.Freezable\bin\Debug\NHibernate.xml
+C:\Projects\samples\Kozmic\Sample.Freezable.4\Sample.Freezable\bin\Debug\Iesi.Collections.xml
+C:\Projects\samples\Kozmic\Sample.Freezable.4\Sample.Freezable\bin\Debug\Castle.Core.xml
+C:\Projects\samples\Kozmic\Sample.Freezable.4\Sample.Freezable\obj\Debug\Sample.Freezable.exe
+C:\Projects\samples\Kozmic\Sample.Freezable.4\Sample.Freezable\obj\Debug\Sample.Freezable.pdb
