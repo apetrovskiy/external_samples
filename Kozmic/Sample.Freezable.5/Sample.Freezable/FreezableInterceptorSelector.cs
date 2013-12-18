@@ -1,7 +1,6 @@
 using System;
 using System.Linq;
 using System.Reflection;
-using Castle.Core.Interceptor;
 using Castle.DynamicProxy;
 
 namespace Sample.Freezable

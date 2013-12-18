@@ -1,7 +1,7 @@
 namespace Sample.Freezable
 {
     using System;
-    using Castle.Core.Interceptor;
+    using Castle.DynamicProxy;
 
     [Serializable]
     public class CallLoggingInterceptor : IInterceptor,IHasCount

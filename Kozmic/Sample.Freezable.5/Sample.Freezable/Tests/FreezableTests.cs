@@ -2,7 +2,7 @@ namespace Sample.Freezable.Tests
 {
     using System;
     using System.Linq;
-    using Castle.Core.Interceptor;
+    using Castle.DynamicProxy;
     using Xunit;
 
     public class FreezableTests
