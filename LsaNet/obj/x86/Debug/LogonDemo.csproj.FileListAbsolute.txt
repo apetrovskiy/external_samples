@@ -1,0 +1,9 @@
+C:\Projects\sources\LsaNet\bin\Debug\LogonDemo.exe.config
+C:\Projects\sources\LsaNet\bin\Debug\LogonDemo.exe
+C:\Projects\sources\LsaNet\bin\Debug\LogonDemo.pdb
+C:\Projects\sources\LsaNet\obj\x86\Debug\LogonDemo.csprojResolveAssemblyReference.cache
+C:\Projects\sources\LsaNet\obj\x86\Debug\LogonDemo.Form1.resources
+C:\Projects\sources\LsaNet\obj\x86\Debug\LogonDemo.InputBox.resources
+C:\Projects\sources\LsaNet\obj\x86\Debug\LogonDemo.csproj.GenerateResource.Cache
+C:\Projects\sources\LsaNet\obj\x86\Debug\LogonDemo.exe
+C:\Projects\sources\LsaNet\obj\x86\Debug\LogonDemo.pdb
