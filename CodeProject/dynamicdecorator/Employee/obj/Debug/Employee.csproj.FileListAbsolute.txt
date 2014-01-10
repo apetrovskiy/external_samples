@@ -1,0 +1,6 @@
+C:\Projects\samples\CodeProject\dynamicdecorator\Employee\bin\Debug\Employee.dll.config
+C:\Projects\samples\CodeProject\dynamicdecorator\Employee\bin\Debug\Employee.dll
+C:\Projects\samples\CodeProject\dynamicdecorator\Employee\bin\Debug\Employee.pdb
+C:\Projects\samples\CodeProject\dynamicdecorator\Employee\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\samples\CodeProject\dynamicdecorator\Employee\obj\Debug\Employee.dll
+C:\Projects\samples\CodeProject\dynamicdecorator\Employee\obj\Debug\Employee.pdb

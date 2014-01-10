@@ -1,0 +1,5 @@
+C:\Projects\samples\CodeProject\dynamicdecorator\DynamicProxy\bin\Debug\DynamicProxy.dll
+C:\Projects\samples\CodeProject\dynamicdecorator\DynamicProxy\bin\Debug\DynamicProxy.pdb
+C:\Projects\samples\CodeProject\dynamicdecorator\DynamicProxy\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\samples\CodeProject\dynamicdecorator\DynamicProxy\obj\Debug\DynamicProxy.dll
+C:\Projects\samples\CodeProject\dynamicdecorator\DynamicProxy\obj\Debug\DynamicProxy.pdb

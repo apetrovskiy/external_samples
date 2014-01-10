@@ -1,0 +1,10 @@
+C:\Projects\samples\CodeProject\dynamicdecorator\TestConsole\bin\Debug\TestConsole.exe.config
+C:\Projects\samples\CodeProject\dynamicdecorator\TestConsole\bin\Debug\TestConsole.exe
+C:\Projects\samples\CodeProject\dynamicdecorator\TestConsole\bin\Debug\TestConsole.pdb
+C:\Projects\samples\CodeProject\dynamicdecorator\TestConsole\bin\Debug\DynamicProxy.dll
+C:\Projects\samples\CodeProject\dynamicdecorator\TestConsole\bin\Debug\Employee.dll
+C:\Projects\samples\CodeProject\dynamicdecorator\TestConsole\bin\Debug\DynamicProxy.pdb
+C:\Projects\samples\CodeProject\dynamicdecorator\TestConsole\bin\Debug\Employee.pdb
+C:\Projects\samples\CodeProject\dynamicdecorator\TestConsole\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\samples\CodeProject\dynamicdecorator\TestConsole\obj\Debug\TestConsole.exe
+C:\Projects\samples\CodeProject\dynamicdecorator\TestConsole\obj\Debug\TestConsole.pdb

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicProxy", "DynamicProxy\DynamicProxy.csproj", "{6721B822-3F99-42FA-B89D-1E31FB431E1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{24226755-5910-4C07-9301-FEE1B93AE8AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employee", "Employee\Employee.csproj", "{67B7D2D9-ACB7-4F01-88A1-FBDA5EBB3A36}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6721B822-3F99-42FA-B89D-1E31FB431E1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6721B822-3F99-42FA-B89D-1E31FB431E1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6721B822-3F99-42FA-B89D-1E31FB431E1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6721B822-3F99-42FA-B89D-1E31FB431E1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24226755-5910-4C07-9301-FEE1B93AE8AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24226755-5910-4C07-9301-FEE1B93AE8AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24226755-5910-4C07-9301-FEE1B93AE8AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24226755-5910-4C07-9301-FEE1B93AE8AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67B7D2D9-ACB7-4F01-88A1-FBDA5EBB3A36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67B7D2D9-ACB7-4F01-88A1-FBDA5EBB3A36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67B7D2D9-ACB7-4F01-88A1-FBDA5EBB3A36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67B7D2D9-ACB7-4F01-88A1-FBDA5EBB3A36}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

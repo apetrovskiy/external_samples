@@ -1,0 +1,11 @@
+
+<Form Text="Currency calculator" Width="250" Height="180">
+		<Label Top="10" Text="Paid on hols" />
+		<TextBox Top="10" Left="100" Name="eurobox" />
+		<Label Top="40" Text="Charged" />
+		<TextBox Top="40" Left="100" Name="GBPbox" />
+		<Label Top="70" Text="Exchange rate is" />
+		<TextBox Top="70" Left="100" Name="ratebox" />
+		<Button Top="100" Name="equals" Text="=" />
+		<Button Top="100" Left="100" Name="clear" Text="Reset" />
+</Form>
