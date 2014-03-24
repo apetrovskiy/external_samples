@@ -1,0 +1,12 @@
+_ReSharper.*
+bin
+Bin
+obj
+dist
+build
+*.suo
+*resharper*
+*.user
+*.dotCover
+/lib/Ninject/*.zip
+/lib/Ninject/*/**
