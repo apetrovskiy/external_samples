@@ -1,0 +1,6 @@
+C:\Projects\samples\LinFu.AOP.Examples-master\SampleLibrary\bin\Debug\SampleLibrary.dll
+C:\Projects\samples\LinFu.AOP.Examples-master\SampleLibrary\bin\Debug\SampleLibrary.pdb
+C:\Projects\samples\LinFu.AOP.Examples-master\SampleLibrary\bin\Debug\LinFu.Core.dll
+C:\Projects\samples\LinFu.AOP.Examples-master\SampleLibrary\obj\Debug\SampleLibrary.csprojResolveAssemblyReference.cache
+C:\Projects\samples\LinFu.AOP.Examples-master\SampleLibrary\obj\Debug\SampleLibrary.dll
+C:\Projects\samples\LinFu.AOP.Examples-master\SampleLibrary\obj\Debug\SampleLibrary.pdb
