@@ -1,0 +1,5 @@
+C:\Projects\samples\JavaAccessBridge.Net-Sample-master\JabApiLib\bin\Debug\JabApi.dll
+C:\Projects\samples\JavaAccessBridge.Net-Sample-master\JabApiLib\bin\Debug\JabApi.pdb
+C:\Projects\samples\JavaAccessBridge.Net-Sample-master\JabApiLib\obj\Debug\JabApi.dll
+C:\Projects\samples\JavaAccessBridge.Net-Sample-master\JabApiLib\obj\Debug\JabApi.pdb
+C:\Projects\samples\JavaAccessBridge.Net-Sample-master\JabApiLib\obj\Debug\JabApiLib.csprojResolveAssemblyReference.cache
