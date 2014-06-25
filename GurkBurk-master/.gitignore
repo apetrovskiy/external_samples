@@ -1,0 +1,12 @@
+packages
+build
+*.suo
+_ReSharper.*
+*.ReSharper.*
+*.user
+*.cache
+*.ncrunchsolution
+*.ncrunchproject
+bin
+obj
+version.txt
