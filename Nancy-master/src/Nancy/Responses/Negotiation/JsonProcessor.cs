@@ -11,8 +11,8 @@
     {
         private readonly ISerializer serializer;
 
-        private static readonly IEnumerable<Tuple<string, MediaRange>> extensionMappings = 
-            new[] { new Tuple<string, MediaRange>("json", MediaRange.FromString("application/json")) };
+        private static readonly IEnumerable<Tuple<string, MediaRange>> extensionMappings =
+            new[] { new Tuple<string, MediaRange>("json", new MediaRange("application/json")) };
 
         /// <summary>
         /// Initializes a new instance of the <see cref="JsonProcessor"/> class,

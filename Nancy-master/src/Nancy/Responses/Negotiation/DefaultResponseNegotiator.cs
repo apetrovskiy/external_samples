@@ -55,10 +55,10 @@
             context.WriteTraceLog(sb => GetAccepHeaderTraceLog(context, negotiationContext, coercedAcceptHeaders, sb));
 
             var compatibleHeaders = this.GetCompatibleHeaders(coercedAcceptHeaders, negotiationContext, context).ToArray();
-            
+
             if (!compatibleHeaders.Any())
             {
-                context.WriteTraceLog(sb => 
+                context.WriteTraceLog(sb =>
                     sb.AppendLine("[DefaultResponseNegotiator] Unable to negotiate response - no headers compatible"));
 
                 return new NotAcceptableResponse();
@@ -75,6 +75,8 @@
         /// <returns><c>true</c> if the result is a <see cref="Response"/>, <c>false</c> otherwise.</returns>
         private static bool TryCastResultToResponse(dynamic routeResult, out Response response)
         {
+            // This code has to be designed this way in order for the cast operator overloads
+            // to be called in the correct way. It cannot be replaced by the as-operator.
             try
             {
                 response = (Response) routeResult;
@@ -104,7 +106,7 @@
 
                 negotiator = new Negotiator(context).WithModel(routeResult);
             }
- 
+
             return negotiator.NegotiationContext;
         }
 
@@ -147,7 +149,7 @@
             NancyContext context)
         {
             var acceptHeaders = GetCompatibleHeaders(coercedAcceptHeaders, negotiationContext);
-            
+
             foreach (var header in acceptHeaders)
             {
                 var mediaRangeModel = negotiationContext.GetModelForMediaRange(header.Item1);
@@ -208,12 +210,12 @@
         /// <param name="context">The context.</param>
         /// <returns>A <see cref="Response"/>.</returns>
         private static Response CreateResponse(
-            IList<CompatibleHeader> compatibleHeaders, 
-            NegotiationContext negotiationContext, 
+            IList<CompatibleHeader> compatibleHeaders,
+            NegotiationContext negotiationContext,
             NancyContext context)
         {
             var response = NegotiateResponse(compatibleHeaders, negotiationContext, context);
-            
+
             if (response == null)
             {
                 context.WriteTraceLog(sb =>
@@ -285,8 +287,8 @@
         /// <param name="response">The response.</param>
         /// <param name="requestUrl">The request URL.</param>
         private static void AddLinkHeader(
-            IEnumerable<CompatibleHeader> compatibleHeaders, 
-            Response response, 
+            IEnumerable<CompatibleHeader> compatibleHeaders,
+            Response response,
             Url requestUrl)
         {
             var linkProcessors = GetLinkProcessors(compatibleHeaders, response.ContentType);

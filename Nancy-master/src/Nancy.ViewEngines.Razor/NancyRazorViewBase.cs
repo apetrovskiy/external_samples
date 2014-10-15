@@ -134,6 +134,24 @@
         protected IRenderContext RenderContext { get; set; }
 
         /// <summary>
+        /// Gets the current <see cref="NancyContext"/> instance.
+        /// </summary>
+        /// <value>A <see cref="NancyContext"/> instance.</value>
+        public NancyContext Context
+        {
+            get { return this.RenderContext.Context; }
+        }
+
+        /// <summary>
+        /// Gets the current <see cref="Request"/> instance.
+        /// </summary>
+        /// <value>A <see cref="Request"/> instance.</value>
+        public Request Request
+        {
+            get { return this.Context.Request; }
+        }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="NancyRazorViewBase"/> class.
         /// </summary>
         protected NancyRazorViewBase()
@@ -184,6 +202,12 @@
                 {
                     var stringValue = this.GetStringValue(value);
                     var valuePrefix = value.Prefix.Item1;
+
+                    // encode anything that hasn't opted out of it
+                    if (!(value.Value.Item1 is IHtmlString))
+                    {
+                        stringValue = HtmlEncode(stringValue);
+                    }
 
                     if (!string.IsNullOrEmpty(valuePrefix))
                     {
@@ -397,7 +421,7 @@
         /// </summary>
         /// <param name="value">Object to potentially encode</param>
         /// <returns>String representation, encoded if necessary</returns>
-        private static string HtmlEncode(object value)
+        private string HtmlEncode(object value)
         {
             if (value == null)
             {
@@ -406,7 +430,9 @@
 
             var str = value as IHtmlString;
 
-            return str != null ? str.ToHtmlString() : HttpUtility.HtmlEncode(Convert.ToString(value, CultureInfo.CurrentCulture));
+            var currentCulture = this.Context.Culture ?? CultureInfo.CurrentCulture;
+
+            return str != null ? str.ToHtmlString() : HttpUtility.HtmlEncode(Convert.ToString(value, currentCulture));
         }
     }
 }

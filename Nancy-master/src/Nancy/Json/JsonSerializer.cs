@@ -142,6 +142,20 @@ namespace Nancy.Json
 				return;
 			}
 
+			JavaScriptPrimitiveConverter jscp = serializer.GetPrimitiveConverter (valueType);
+
+			if (jscp != null) {
+				obj = jscp.Serialize (obj, serializer);
+
+				if (obj == null || DBNull.Value.Equals (obj)) {
+					// Recurse in order that there be one place in the code that handles null values.
+					SerializeValueImpl (obj, output);
+					return;
+				}
+
+				valueType = obj.GetType ();
+			}
+
 			TypeCode typeCode = Type.GetTypeCode (valueType);
 			switch (typeCode) {
 				case TypeCode.String:
@@ -196,6 +210,12 @@ namespace Nancy.Json
 				WriteValue (output, (Guid)obj);
 				return;
 			}
+
+            if (valueType == typeof(DateTimeOffset))
+            {
+                WriteValue(output, (DateTimeOffset)obj);
+                return;
+            }
 
 			if (typeof (DynamicDictionaryValue).IsAssignableFrom(valueType))
 			{
@@ -516,6 +536,11 @@ namespace Nancy.Json
 		        StringBuilderExtensions.AppendCount(output, maxJsonLength, "\"\\/Date(" + ticks + suffix + ")\\/\"");
 		    }
 		}
+
+        void WriteValue(StringBuilder output, DateTimeOffset value)
+        {
+            StringBuilderExtensions.AppendCount(output, maxJsonLength, string.Concat("\"", value.ToString("o", CultureInfo.InvariantCulture), "\""));
+        }
 
 		void WriteValue (StringBuilder output, IConvertible value)
 		{

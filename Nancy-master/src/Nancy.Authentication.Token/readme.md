@@ -16,13 +16,13 @@ Token authentication and authorization was built with the following requirements
 Token Authentication can be wired up in a simliar fashion to other available forms of Nancy authentication.
 
 ```csharp
-    public class Bootstrapper : DefaultNancyBootstrapper
+public class Bootstrapper : DefaultNancyBootstrapper
+{
+    protected override void RequestStartup(TinyIoCContainer container, IPipelines pipelines, NancyContext context)
     {
-        protected override void RequestStartup(TinyIoCContainer container, IPipelines pipelines, NancyContext context)
-        {
-            TokenAuthentication.Enable(pipelines, new TokenAuthenticationConfiguration(container.Resolve<ITokenizer>()));
-        }
+        TokenAuthentication.Enable(pipelines, new TokenAuthenticationConfiguration(container.Resolve<ITokenizer>()));
     }
+}
 ```
 
 You will need to provide your own form of initial user authentication. This can use your own custom implementation that queries
@@ -44,45 +44,45 @@ the client device.
 The following code shows an example of how you can perform the initial user authorization and return the generated token to the client.
 
 ```csharp
-    public class AuthModule : NancyModule
+public class AuthModule : NancyModule
+{
+    public AuthModule(ITokenizer tokenizer)
+        : base("/auth")
     {
-        public AuthModule(ITokenizer tokenizer)
-            : base("/auth")
-        {
-            Post["/"] = x =>
+        Post["/"] = x =>
+            {
+                var userName = (string)this.Request.Form.UserName;
+                var password = (string)this.Request.Form.Password;
+
+                var userIdentity = UserDatabase.ValidateUser(userName, password);
+
+                if (userIdentity == null)
                 {
-                    var userName = (string)this.Request.Form.UserName;
-                    var password = (string)this.Request.Form.Password;
+                    return HttpStatusCode.Unauthorized;
+                }
 
-                    var userIdentity = UserDatabase.ValidateUser(userName, password);
+                var token = tokenizer.Tokenize(userIdentity, Context);
 
-                    if (userIdentity == null)
+                return new
                     {
-                        return HttpStatusCode.Unauthorized;
-                    }
+                        Token = token,
+                    };
+            };
 
-                    var token = tokenizer.Tokenize(userIdentity, Context);
-
-                    return new
-                        {
-                            Token = token,
-                        };
-                };
-
-            Get["/validation"] = _ =>
-                {
-                    this.RequiresAuthentication();
-                    return "Yay! You are authenticated!";
-                };
-
-            Get["/admin"] = _ =>
+        Get["/validation"] = _ =>
             {
                 this.RequiresAuthentication();
-                this.RequiresClaims(new[] { "admin" });
-                return "Yay! You are authorized!";
+                return "Yay! You are authenticated!";
             };
-        }
+
+        Get["/admin"] = _ =>
+        {
+            this.RequiresAuthentication();
+            this.RequiresClaims(new[] { "admin" });
+            return "Yay! You are authorized!";
+        };
     }
+}
 ```
 
 ## Contributors

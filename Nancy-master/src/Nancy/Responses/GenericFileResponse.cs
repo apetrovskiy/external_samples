@@ -9,7 +9,7 @@ namespace Nancy.Responses
     using Nancy.Helpers;
 
     /// <summary>
-    /// A response representing a file. 
+    /// A response representing a file.
     /// </summary>
     /// <remarks>If the response contains an invalid file (not found, empty name, missing extension and so on) the status code of the response will be set to <see cref="HttpStatusCode.NotFound"/>.</remarks>
     public class GenericFileResponse : Response
@@ -26,7 +26,7 @@ namespace Nancy.Responses
         ///  Size of buffer for transmitting file. Default size 4 Mb
         /// </summary>
         public static int BufferSize = 4 * 1024 * 1024;
-                
+
         static GenericFileResponse()
         {
             SafePaths = new List<string>();
@@ -38,7 +38,7 @@ namespace Nancy.Responses
         /// </summary>
         /// <param name="filePath">The name of the file, including path relative to the root of the application, that should be returned.</param>
         /// <remarks>The <see cref="MimeTypes.GetMimeType"/> method will be used to determine the mimetype of the file and will be used as the content-type of the response. If no match if found the content-type will be set to application/octet-stream.</remarks>
-        public GenericFileResponse(string filePath) : 
+        public GenericFileResponse(string filePath) :
             this (filePath, MimeTypes.GetMimeType(filePath))
         {
         }
@@ -145,6 +145,7 @@ namespace Nancy.Responses
             var lastWriteTimeUtc = fi.LastWriteTimeUtc;
             var etag = string.Concat("\"", lastWriteTimeUtc.Ticks.ToString("x"), "\"");
             var lastModified = lastWriteTimeUtc.ToString("R");
+            var length = fi.Length;
 
             if (CacheHelpers.ReturnNotModified(etag, lastWriteTimeUtc, context))
             {
@@ -157,12 +158,13 @@ namespace Nancy.Responses
 
             this.Headers["ETag"] = etag;
             this.Headers["Last-Modified"] = lastModified;
-            
-            if (fi.Length > 0)
+            this.Headers["Content-Length"] = length.ToString();
+
+            if (length > 0)
             {
-                this.Contents = GetFileContent(fullPath, fi.Length);
+                this.Contents = GetFileContent(fullPath, length);
             }
-            
+
             this.ContentType = contentType;
             this.StatusCode = HttpStatusCode.OK;
         }

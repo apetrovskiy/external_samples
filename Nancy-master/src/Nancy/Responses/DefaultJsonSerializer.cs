@@ -65,8 +65,8 @@
             using (var writer = new StreamWriter(new UnclosableStreamWrapper(outputStream)))
             {
                 var serializer = new JavaScriptSerializer(null, false, JsonSettings.MaxJsonLength, JsonSettings.MaxRecursions, RetainCasing, ISO8601DateFormat);
-            
-                serializer.RegisterConverters(JsonSettings.Converters);
+
+                serializer.RegisterConverters(JsonSettings.Converters, JsonSettings.PrimitiveConverters);
 
                 serializer.Serialize(model, writer);
             }
