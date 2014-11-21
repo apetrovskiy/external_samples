@@ -3,8 +3,8 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="NancyConnegDemo/Modules/HomeModule.cs">
     <Files>
       <File FileName="NancyConnegDemo/Modules/HomeModule.cs" Line="56" Column="20" />
-      <File FileName="NancyConnegDemo/Views/Home/index.cshtml" Line="51" Column="28" />
-      <File FileName="NancyConnegDemo/NancyDemoBootstrapper.cs" Line="17" Column="28" />
+      <File FileName="NancyConnegDemo/Views/Home/index.cshtml" Line="1" Column="1" />
+      <File FileName="NancyConnegDemo/NancyDemoBootstrapper.cs" Line="1" Column="1" />
       <File FileName="NancyConnegDemo/web.config" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
