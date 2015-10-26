@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyNancy", "MyNancy.csproj", "{CB5DC0A9-E430-4679-82DF-107A555A4D0C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CB5DC0A9-E430-4679-82DF-107A555A4D0C}.Debug|x86.ActiveCfg = Debug|x86
+		{CB5DC0A9-E430-4679-82DF-107A555A4D0C}.Debug|x86.Build.0 = Debug|x86
+		{CB5DC0A9-E430-4679-82DF-107A555A4D0C}.Release|x86.ActiveCfg = Release|x86
+		{CB5DC0A9-E430-4679-82DF-107A555A4D0C}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = MyNancy.csproj
+	EndGlobalSection
+EndGlobal

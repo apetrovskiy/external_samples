@@ -1,0 +1,23 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<TodoNancy.Todo[]>
+
+<html>
+  <head><title>Todos</title></head>
+  <body>
+    <h1>All todos</h1>
+    <table>
+      <th>Title</th><th>Order</th><th>Completed</th>
+      @foreach (var todo in @Model)
+      {
+        <tr id="@todo.id"><td>@todo.title</td><td>@todo.order</td><td>@todo.completed</td></tr>
+      }
+    </table >
+    <h1>Add todo</h1>
+    <form action="/todos/" method="post">
+      <input type="text" name="title" value="title" />
+      <input type="number" name="order" value="0" />
+      <input type="checkbox" name="completed" />
+      <input type="submit" value="add" />
+    </form>
+  </body>
+</html>
+            

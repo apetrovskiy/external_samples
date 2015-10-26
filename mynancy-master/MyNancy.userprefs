@@ -1,0 +1,22 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Modules/AdminModule.cs">
+    <Files>
+      <File FileName="Models/loginModel.cs" Line="9" Column="5" />
+      <File FileName="MyBootStrapper.cs" Line="1" Column="1" />
+      <File FileName="MyErrorHandler.cs" Line="1" Column="1" />
+      <File FileName="MyUserMapper.cs" Line="21" Column="9" />
+      <File FileName="Program.cs" Line="20" Column="73" />
+      <File FileName="Models/MasterPageModel.cs" Line="1" Column="1" />
+      <File FileName="Modules/MainModule.cs" Line="44" Column="38" />
+      <File FileName="Views/login.html" Line="1" Column="1" />
+      <File FileName="Modules/BaseModule.cs" Line="1" Column="1" />
+      <File FileName="Modules/AdminModule.cs" Line="20" Column="62" />
+      <File FileName="Models/admin/indexModel.cs" Line="8" Column="5" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
