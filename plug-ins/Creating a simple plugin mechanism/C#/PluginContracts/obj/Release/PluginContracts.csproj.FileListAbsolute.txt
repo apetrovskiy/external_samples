@@ -1,0 +1,4 @@
+C:\Projects\samples\plug-ins\Creating a simple plugin mechanism\C#\PluginContracts\bin\Release\PluginContracts.dll
+C:\Projects\samples\plug-ins\Creating a simple plugin mechanism\C#\PluginContracts\bin\Release\PluginContracts.pdb
+C:\Projects\samples\plug-ins\Creating a simple plugin mechanism\C#\PluginContracts\obj\Release\PluginContracts.dll
+C:\Projects\samples\plug-ins\Creating a simple plugin mechanism\C#\PluginContracts\obj\Release\PluginContracts.pdb

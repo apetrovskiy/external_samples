@@ -1,0 +1,12 @@
+﻿@model MusicBox.Web.Models.SearchModel
+@using MusicBox.Framework.Common;
+
+<div>
+   @using (Html.BeginForm("Search", "Artist", FormMethod.Get))
+   {
+       @Html.EditorFor(model => model.SearchTerm)
+       <button type="submit" class="btn btn-default searchButton">
+            @Html.Image("~/Content/Images/search.png", "Search", "searchButtonImage") 
+       </button>
+    }>
+</div>

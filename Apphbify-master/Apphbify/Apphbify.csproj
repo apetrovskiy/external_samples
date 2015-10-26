@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{66144DCD-351D-4D00-B421-BA5508A52B99}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Apphbify</RootNamespace>
+    <AssemblyName>Apphbify</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <JSLintSkip>\Content\js\bootstrap.js|\Content\js\jquery-1.7.2.js|\Content\js\apphbify.min.js|\Content\js\bootstrap.modal.js|\Content\js\bootstrap.tooltip.js|\Content\js\jquery-1.7.2.min.js</JSLintSkip>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AppHarbor.Sdk, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AppHarbor.NET.2.2.0\lib\net35\AppHarbor.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Nancy, Version=0.12.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Nancy.0.12.1\lib\net40\Nancy.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy.Hosting.Aspnet, Version=0.12.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Nancy.Hosting.Aspnet.0.12.1\lib\net40\Nancy.Hosting.Aspnet.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy.ViewEngines.Razor, Version=0.12.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Nancy.Viewengines.Razor.0.12.1\lib\net40\Nancy.ViewEngines.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.4.5.9\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=104.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\RestSharp.104.1\lib\net4\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Nancy.Viewengines.Razor.0.12.1\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\css\apphbify.min.css">
+      <DependentUpon>apphbify.chirp.config</DependentUpon>
+    </Content>
+    <EmbeddedResource Include="Addons.json" />
+    <None Include="Content\css\bootstrap-responsive.css" />
+    <None Include="Content\css\bootstrap.css" />
+    <None Include="Content\css\master.css" />
+    <None Include="Content\css\fonts.css" />
+    <Content Include="Content\fonts\ballpark_weiner-webfont.svg" />
+    <Content Include="Content\fonts\Mickey Rossi License.txt" />
+    <Content Include="Content\fonts\Quicksand SIL OFL License 1.1.txt" />
+    <Content Include="Content\fonts\Quicksand_Bold-webfont.svg" />
+    <Content Include="Content\fonts\Quicksand_Bold_Oblique-webfont.svg" />
+    <Content Include="Content\fonts\Quicksand_Book-webfont.svg" />
+    <Content Include="Content\fonts\Quicksand_Book_Oblique-webfont.svg" />
+    <Content Include="Content\fonts\Quicksand_Dash-webfont.svg" />
+    <Content Include="Content\fonts\Quicksand_Light-webfont.svg" />
+    <Content Include="Content\fonts\Quicksand_Light_Oblique-webfont.svg" />
+    <Content Include="Content\fonts\Ubuntu-B-webfont.svg" />
+    <Content Include="Content\fonts\Ubuntu-BI-webfont.svg" />
+    <Content Include="Content\fonts\Ubuntu-C-webfont.svg" />
+    <Content Include="Content\fonts\Ubuntu-L-webfont.svg" />
+    <Content Include="Content\fonts\Ubuntu-LI-webfont.svg" />
+    <Content Include="Content\fonts\Ubuntu-M-webfont.svg" />
+    <Content Include="Content\fonts\Ubuntu-MI-webfont.svg" />
+    <Content Include="Content\fonts\Ubuntu-R-webfont.svg" />
+    <Content Include="Content\fonts\Ubuntu-RI-webfont.svg" />
+    <Content Include="Content\img\glyphicons-halflings-white.png" />
+    <Content Include="Content\img\glyphicons-halflings.png" />
+    <Content Include="Content\js\apphbify.min.js">
+      <DependentUpon>apphbify.chirp.config</DependentUpon>
+    </Content>
+    <Content Include="Content\fonts\ballpark_weiner-webfont.eot" />
+    <Content Include="Content\fonts\ballpark_weiner-webfont.ttf" />
+    <Content Include="Content\fonts\ballpark_weiner-webfont.woff" />
+    <Content Include="Content\fonts\Quicksand_Bold-webfont.eot" />
+    <Content Include="Content\fonts\Quicksand_Bold-webfont.ttf" />
+    <Content Include="Content\fonts\Quicksand_Bold-webfont.woff" />
+    <Content Include="Content\fonts\Quicksand_Bold_Oblique-webfont.eot" />
+    <Content Include="Content\fonts\Quicksand_Bold_Oblique-webfont.ttf" />
+    <Content Include="Content\fonts\Quicksand_Bold_Oblique-webfont.woff" />
+    <Content Include="Content\fonts\Quicksand_Book-webfont.eot" />
+    <Content Include="Content\fonts\Quicksand_Book-webfont.ttf" />
+    <Content Include="Content\fonts\Quicksand_Book-webfont.woff" />
+    <Content Include="Content\fonts\Quicksand_Book_Oblique-webfont.eot" />
+    <Content Include="Content\fonts\Quicksand_Book_Oblique-webfont.ttf" />
+    <Content Include="Content\fonts\Quicksand_Book_Oblique-webfont.woff" />
+    <Content Include="Content\fonts\Quicksand_Dash-webfont.eot" />
+    <Content Include="Content\fonts\Quicksand_Dash-webfont.ttf" />
+    <Content Include="Content\fonts\Quicksand_Dash-webfont.woff" />
+    <Content Include="Content\fonts\Quicksand_Light-webfont.eot" />
+    <Content Include="Content\fonts\Quicksand_Light-webfont.ttf" />
+    <Content Include="Content\fonts\Quicksand_Light-webfont.woff" />
+    <Content Include="Content\fonts\Quicksand_Light_Oblique-webfont.eot" />
+    <Content Include="Content\fonts\Quicksand_Light_Oblique-webfont.ttf" />
+    <Content Include="Content\fonts\Quicksand_Light_Oblique-webfont.woff" />
+    <Content Include="Content\fonts\Ubuntu-B-webfont.eot" />
+    <Content Include="Content\fonts\Ubuntu-B-webfont.ttf" />
+    <Content Include="Content\fonts\Ubuntu-B-webfont.woff" />
+    <Content Include="Content\fonts\Ubuntu-BI-webfont.eot" />
+    <Content Include="Content\fonts\Ubuntu-BI-webfont.ttf" />
+    <Content Include="Content\fonts\Ubuntu-BI-webfont.woff" />
+    <Content Include="Content\fonts\Ubuntu-C-webfont.eot" />
+    <Content Include="Content\fonts\Ubuntu-C-webfont.ttf" />
+    <Content Include="Content\fonts\Ubuntu-C-webfont.woff" />
+    <Content Include="Content\fonts\Ubuntu-L-webfont.eot" />
+    <Content Include="Content\fonts\Ubuntu-L-webfont.ttf" />
+    <Content Include="Content\fonts\Ubuntu-L-webfont.woff" />
+    <Content Include="Content\fonts\Ubuntu-LI-webfont.eot" />
+    <Content Include="Content\fonts\Ubuntu-LI-webfont.ttf" />
+    <Content Include="Content\fonts\Ubuntu-LI-webfont.woff" />
+    <Content Include="Content\fonts\Ubuntu-M-webfont.eot" />
+    <Content Include="Content\fonts\Ubuntu-M-webfont.ttf" />
+    <Content Include="Content\fonts\Ubuntu-M-webfont.woff" />
+    <Content Include="Content\fonts\Ubuntu-MI-webfont.eot" />
+    <Content Include="Content\fonts\Ubuntu-MI-webfont.ttf" />
+    <Content Include="Content\fonts\Ubuntu-MI-webfont.woff" />
+    <Content Include="Content\fonts\Ubuntu-R-webfont.eot" />
+    <Content Include="Content\fonts\Ubuntu-R-webfont.ttf" />
+    <Content Include="Content\fonts\Ubuntu-R-webfont.woff" />
+    <Content Include="Content\fonts\Ubuntu-RI-webfont.eot" />
+    <Content Include="Content\fonts\Ubuntu-RI-webfont.ttf" />
+    <Content Include="Content\fonts\Ubuntu-RI-webfont.woff" />
+    <None Include="Content\js\bootstrap.js" />
+    <EmbeddedResource Include="Regions.json" />
+    <Content Include="Resources\favicon.ico" />
+    <None Include="Content\js\bootstrap.modal.js" />
+    <None Include="Content\js\bootstrap.tooltip.js" />
+    <Content Include="Content\js\jquery-1.7.2.min.js" />
+    <None Include="Content\js\Main.js" />
+    <Content Include="Content\js\Sites.min.js">
+      <DependentUpon>Sites.uglify.js</DependentUpon>
+    </Content>
+    <None Include="Content\js\Sites.uglify.js" />
+    <EmbeddedResource Include="Resources\robots.txt" />
+    <EmbeddedResource Include="Resources\humans.txt" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Apps.cshtml" />
+    <EmbeddedResource Include="Apps.json" />
+    <Content Include="Views\SignIn.cshtml" />
+    <Content Include="Views\Sites.cshtml" />
+    <Content Include="Views\Deploy.cshtml" />
+    <Content Include="Views\About.cshtml" />
+    <Content Include="Content\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="HookModule.cs" />
+    <Compile Include="Models\Application.cs" />
+    <Compile Include="Models\ServiceHookModel.cs" />
+    <Compile Include="OAuthModule.cs" />
+    <Compile Include="PagesModule.cs" />
+    <Compile Include="PagesModule.Secure.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\StaticResources.cs" />
+    <Compile Include="ResponseExtensions.cs" />
+    <Compile Include="Services\Impl\ApiService.cs" />
+    <Compile Include="Services\Impl\DeploymentService.cs" />
+    <Compile Include="Services\IApiService.cs" />
+    <Compile Include="Services\IDeploymentService.cs" />
+    <Compile Include="Services\IMailService.cs" />
+    <Compile Include="Services\Impl\NullMailService.cs" />
+    <Compile Include="Services\IOAuth.cs" />
+    <Compile Include="Services\Impl\OAuth.cs" />
+    <Compile Include="Services\Impl\SendGridMailService.cs" />
+    <Compile Include="SessionKeys.cs" />
+    <Compile Include="Data\SitesData.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\DeployViewModel.cs" />
+    <Compile Include="ViewModels\JsonResult.cs" />
+    <Compile Include="ViewModels\SignInViewModel.cs" />
+    <Compile Include="ViewModels\AppsViewModel.cs" />
+    <Compile Include="ViewModels\SitesViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\js\apphbify.chirp.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\css\apphbify.chirp.config" />
+    <Content Include="Views\Home.cshtml" />
+    <Content Include="Views\Master.cshtml" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49440</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49440/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+      if $(ConfigurationName) == Debug (
+      xcopy /s /y "$(SolutionDir)packages\Nancy.Viewengines.Razor.0.12.1\BuildProviders\Nancy.ViewEngines.Razor.BuildProviders.dll" "$(ProjectDir)bin"
+      xcopy /s /y "$(SolutionDir)packages\Nancy.Viewengines.Razor.0.12.1\lib\Net40\Nancy.ViewEngines.Razor.dll" "$(ProjectDir)bin"
+      )
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

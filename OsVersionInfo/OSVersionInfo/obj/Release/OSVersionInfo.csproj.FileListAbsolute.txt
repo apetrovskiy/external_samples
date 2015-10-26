@@ -1,0 +1,11 @@
+C:\Users\Johnny\Downloads\OSVersionInfo\bin\Release\OSVersionInfoDemo.exe
+C:\Users\Johnny\Downloads\OSVersionInfo\bin\Release\OSVersionInfoDemo.pdb
+C:\Users\Johnny\Downloads\OSVersionInfo\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Johnny\Downloads\OSVersionInfo\obj\Release\JCS.Form1.resources
+C:\Users\Johnny\Downloads\OSVersionInfo\obj\Release\JCS.Properties.Resources.resources
+C:\Users\Johnny\Downloads\OSVersionInfo\obj\Release\OSVersionInfo.csproj.GenerateResource.Cache
+C:\Users\Johnny\Downloads\OSVersionInfo\obj\Release\OSVersionInfoDemo.exe
+C:\Users\Johnny\Downloads\OSVersionInfo\obj\Release\OSVersionInfoDemo.pdb
+C:\Users\Johnny\Downloads\OSVersionInfo\bin\Release\OSVersionInfoDemo.exe.config
+C:\Users\Johnny\Downloads\OSVersionInfo\bin\Release\OSVersionInfo.dll
+C:\Users\Johnny\Downloads\OSVersionInfo\bin\Release\OSVersionInfo.pdb

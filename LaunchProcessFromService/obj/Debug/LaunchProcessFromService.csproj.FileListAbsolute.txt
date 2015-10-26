@@ -1,0 +1,5 @@
+C:\Projects\samples\LaunchProcessFromService\bin\Debug\LaunchProcessFromService.exe
+C:\Projects\samples\LaunchProcessFromService\bin\Debug\LaunchProcessFromService.pdb
+C:\Projects\samples\LaunchProcessFromService\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\samples\LaunchProcessFromService\obj\Debug\LaunchProcessFromService.exe
+C:\Projects\samples\LaunchProcessFromService\obj\Debug\LaunchProcessFromService.pdb

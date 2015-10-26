@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{12EFC308-40B9-4B4D-B13B-F7A1DA00EE4B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{1EBCA563-4DB7-4C88-BDDC-39793D84928D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicBox.Debug", "MusicBox.Debug\MusicBox.Debug.csproj", "{DB3EAFCE-38A2-4672-A48F-B7A11CBC8D7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicBox.Framework.Web", "MusicBox.Framework.Web\MusicBox.Framework.Web.csproj", "{68F5F5F3-B8BB-4911-875F-6F00AAE04EA6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB3EAFCE-38A2-4672-A48F-B7A11CBC8D7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB3EAFCE-38A2-4672-A48F-B7A11CBC8D7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB3EAFCE-38A2-4672-A48F-B7A11CBC8D7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB3EAFCE-38A2-4672-A48F-B7A11CBC8D7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68F5F5F3-B8BB-4911-875F-6F00AAE04EA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68F5F5F3-B8BB-4911-875F-6F00AAE04EA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68F5F5F3-B8BB-4911-875F-6F00AAE04EA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68F5F5F3-B8BB-4911-875F-6F00AAE04EA6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{68F5F5F3-B8BB-4911-875F-6F00AAE04EA6} = {12EFC308-40B9-4B4D-B13B-F7A1DA00EE4B}
+		{DB3EAFCE-38A2-4672-A48F-B7A11CBC8D7C} = {1EBCA563-4DB7-4C88-BDDC-39793D84928D}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-suite xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" start="1413095419308" stop="1413095419499" version="1.4.0" xmlns="urn:model.allure.qatools.yandex.ru">
+  <name xmlns="">Category3</name>
+  <test-cases xmlns="">
+    <test-case start="1413095419448" stop="1413095419448" status="passed">
+      <name>CSVDataDrivenTest0</name>
+      <description>Description of the CSVDataDrivenTest data driven test.
+Test Owner: Owner3</description>
+      <labels>
+        <label name="Owner" value="Owner3" />
+      </labels>
+    </test-case>
+    <test-case start="1413095419448" stop="1413095419448" status="passed">
+      <name>CSVDataDrivenTest1</name>
+      <description>Description of the CSVDataDrivenTest data driven test.
+Test Owner: Owner3</description>
+      <labels>
+        <label name="Owner" value="Owner3" />
+      </labels>
+    </test-case>
+    <test-case start="1413095419448" stop="1413095419458" status="failed">
+      <name>CSVDataDrivenTest2</name>
+      <description>Description of the CSVDataDrivenTest data driven test.
+Test Owner: Owner3</description>
+      <failure>
+        <message>Test method SampleTestingProject.UnitTest1.CSVDataDrivenTest threw exception: 
+System.DivideByZeroException: Attempted to divide by zero.</message>
+        <stack-trace>    at SampleTestingProject.UnitTest1.CSVDataDrivenTest() in C:\Documents and Settings\chen\allure-mstest-adapter\SampleTestingProject\UnitTest1.cs:line 89
+</stack-trace>
+      </failure>
+      <labels>
+        <label name="Owner" value="Owner3" />
+      </labels>
+    </test-case>
+  </test-cases>
+</test-suite>

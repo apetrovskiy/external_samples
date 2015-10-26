@@ -1,0 +1,6 @@
+C:\Projects\samples\0313vsm_SteeleCSharpCornerCode\VSMDemo.Web\bin\Debug\VSMDemo.Web.dll
+C:\Projects\samples\0313vsm_SteeleCSharpCornerCode\VSMDemo.Web\bin\Debug\VSMDemo.Web.pdb
+C:\Projects\samples\0313vsm_SteeleCSharpCornerCode\VSMDemo.Web\bin\Debug\Nancy.dll
+C:\Projects\samples\0313vsm_SteeleCSharpCornerCode\VSMDemo.Web\obj\Debug\VSMDemo.Web.csprojResolveAssemblyReference.cache
+C:\Projects\samples\0313vsm_SteeleCSharpCornerCode\VSMDemo.Web\obj\Debug\VSMDemo.Web.dll
+C:\Projects\samples\0313vsm_SteeleCSharpCornerCode\VSMDemo.Web\obj\Debug\VSMDemo.Web.pdb

@@ -1,0 +1,62 @@
+﻿[
+  {
+    key: 'wordpress',
+    name: 'WordPress (beta)',
+    description: 'WordPress is an open source blogging tool and a content management system (CMS) based on PHP and MySQL.',
+    project_url: 'https://github.com/appharbor/Wordpress',
+    download_url: 'https://github.com/appharbor/Wordpress/tarball/master',
+    addons: ['mysql'],
+    enableFileSystem: true,
+    variables: { }
+  },
+  {
+    key: 'saywat',
+    name: 'SayWat',
+    description: 'Find the meaning of regional words and sayings.',
+    project_url: 'https://github.com/Code52/saywat',
+    download_url: 'https://github.com/Code52/saywat/tarball/master',
+    addons: ['mongolab'],
+    enableFileSystem: true
+  },
+  {
+    key: 'ideastrike',
+    name: 'IdeaStrike',
+    description: 'Gather user feedback and ideas for your product.',
+    project_url: 'https://github.com/Code52/Ideastrike',
+    download_url: 'https://github.com/csainty/Ideastrike/tarball/appharbify',
+    addons: ['sqlserver'],
+    enableFileSystem: false
+  },
+  {
+    key: 'jabbr',
+    name: 'JabbR',
+    description: 'JabbR is a chat application built with ASP.NET using SignalR.',
+    project_url: 'http://about.jabbr.net/',
+    download_url: 'https://github.com/csainty/JabbR/tarball/AppHarbify',
+    addons: ['sqlserver'],
+    enableFileSystem: true,
+    variables: {
+      'jabbr:googleAnalytics': 'Google analytics key',
+      'jabbr:azureblobStorageConnectionString': 'Azure file upload provider'
+    },
+	default_variables: {
+		'jabbr:proxyImages': 'true',
+		'jabbr:requireHttps': 'true',
+		'jabbr:encryptionKey': '{random_hex}',
+		'jabbr:verificationKey': '{random_hex}'
+	}
+  },
+  {
+    key: 'funnelweb',
+    name: 'FunnelWeb',
+    description: 'FunnelWeb is an open source blog engine targeted at developers.',
+    project_url: 'http://funnelweblog.com/',
+    download_url: 'https://github.com/csainty/FunnelWeb-Built/tarball/master',
+    addons: ['sqlserver'],
+    enableFileSystem: false,
+    variables: {
+      'funnelweb.configuration.authentication.username': 'Admin username',
+      'funnelweb.configuration.authentication.password': 'Admin password'
+    }
+  }
+]

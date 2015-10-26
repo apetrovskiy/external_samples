@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSVersionInfo", "OSVersionInfo.csproj", "{206B4D2D-41A7-47D3-8687-58D2B86E35AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSVersionInfoDLL", "..\OSVersionInfoDLL\OSVersionInfoDLL.csproj", "{9599DF4F-9D56-4448-8F56-76B3966982A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{206B4D2D-41A7-47D3-8687-58D2B86E35AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{206B4D2D-41A7-47D3-8687-58D2B86E35AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{206B4D2D-41A7-47D3-8687-58D2B86E35AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{206B4D2D-41A7-47D3-8687-58D2B86E35AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9599DF4F-9D56-4448-8F56-76B3966982A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9599DF4F-9D56-4448-8F56-76B3966982A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9599DF4F-9D56-4448-8F56-76B3966982A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9599DF4F-9D56-4448-8F56-76B3966982A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

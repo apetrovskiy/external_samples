@@ -1,0 +1,63 @@
+﻿@model IEnumerable<MusicBox.Web.Models.SearchResultModel>
+@using MusicBox.Framework.Common;
+
+@{
+    ViewBag.Title = "Search Results";
+}
+
+<h2>Search</h2>
+
+<script type="text/javascript">
+    function HideResults() {
+        $("#searchResults").hide();
+        $("#addArtistBusy").show();
+    }
+</script>
+
+<div id="searchResults">
+    <table>
+        <thead>
+            <tr>
+                <th>&nbsp;</th>
+                <th>Artist Name</th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Count() == 0)
+            {
+                <tr>
+                    <td></td>
+                    <td><b>No results found!</b></td>
+                    <td></td>
+                </tr>
+            }
+            else
+            {
+                foreach (var result in Model)
+                {
+                    <tr>
+                        <td><img src='@result.CoverArtURL' width="50" /></td>
+                        <td>@result.Name</td>
+                        <td>@Html.ActionLink("Add artist", "AddArtist", "Artist", new { mbid = result.MBID }, new { onclick = "HideResults();" })</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+<div id="addArtistBusy" style="display:none;vertical-align:central;text-align:center;">
+    <table>
+        <tr>
+            <td>
+                @Html.Image("~/Content/Images/busyIndicator.gif", "Please wait")
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Please wait...
+            </td>
+        </tr>
+    </table>
+</div>
+

@@ -1,0 +1,7 @@
+C:\Projects\samples\plug-ins\Creating a simple plugin mechanism\C#\FirstPlugin\bin\Debug\FirstPlugin.dll
+C:\Projects\samples\plug-ins\Creating a simple plugin mechanism\C#\FirstPlugin\bin\Debug\FirstPlugin.pdb
+C:\Projects\samples\plug-ins\Creating a simple plugin mechanism\C#\FirstPlugin\bin\Debug\PluginContracts.dll
+C:\Projects\samples\plug-ins\Creating a simple plugin mechanism\C#\FirstPlugin\bin\Debug\PluginContracts.pdb
+C:\Projects\samples\plug-ins\Creating a simple plugin mechanism\C#\FirstPlugin\obj\Debug\FirstPlugin.csprojResolveAssemblyReference.cache
+C:\Projects\samples\plug-ins\Creating a simple plugin mechanism\C#\FirstPlugin\obj\Debug\FirstPlugin.dll
+C:\Projects\samples\plug-ins\Creating a simple plugin mechanism\C#\FirstPlugin\obj\Debug\FirstPlugin.pdb

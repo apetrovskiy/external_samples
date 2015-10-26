@@ -1,0 +1,68 @@
+SPRING.NET REST CLIENT FRAMEWORK CHANGELOG
+==========================================
+http://www.springframework.net/rest/
+
+Release Version 1.1.1 November 15, 2012
+
+Bug
+[SPRNETREST-27] - Support for RFC3986 with respect to url encoding
+[SPRNETREST-28] - Support for 'Range' HTTP header in WebHttpClientRequest
+[SPRNETREST-29] - Fix exception propagation issue with request interceptor in asynchronous methods
+
+Improvement
+[SPRNETREST-25] - Add GetValueOrDefault method to the JsonValue class
+
+Task
+[SPRNETREST-24] - Update JSON.NET version to 4.5 Release 10
+
+
+*******************************************************************************
+Release Version 1.1.0 January 23, 2012
+
+Bug
+[SPRNETREST-11] - Make class WebClientHttpRequestFactory thread-safe
+
+Improvement
+[SPRNETREST-18] - Better handling of empty response messages (204, 304) in RestTemplate
+[SPRNETREST-23] - IResponseErrorHandler refactoring
+
+New Feature
+[SPRNETREST-16] - Add Silverlight 5 support
+[SPRNETREST-17] - Add Task-based asynchronous support
+[SPRNETREST-19] - Add light-weight JSON support
+[SPRNETREST-20] - Add Testing Framework for RestTemplate based code
+[SPRNETREST-21] - Add IResource abstraction from Spring.NET Core
+[SPRNETREST-22] - Add HTTP message converter based on IResource abstraction
+
+Task
+[SPRNETREST-12] - Change HttpMethod type from Enum to Class
+[SPRNETREST-13] - Rename JsonHttpMessageConverter into DataContractJsonHttpMessageConverter
+[SPRNETREST-14] - Remove IRestAsyncOperations interface
+[SPRNETREST-15] - Update JSON.NET version to 4.0 Release 5
+
+
+*******************************************************************************
+Release Version 1.0.2 November 7, 2011
+
+Bug
+[SPRNETREST-7]  - Fix IClientHttpRequestAsyncInterceptor interceptor when modifying the HTTP response
+[SPRNETREST-8]  - Support 'chunked' transfer encoding in HTTP response
+
+Task
+[SPRNETREST-10] - Update JSON.NET version to 4.0 Release 3
+
+New Feature
+[SPRNETREST-6]  - Add .NET Compact Framework 3.5 support
+[SPRNETREST-9]  - Add Windows Phone 7.1 support
+
+
+*******************************************************************************
+Release Version 1.0.1 June 14, 2011
+
+Bug
+[SPRNETREST-3] - Allow to set 'COOKIE' header for silverlight applications
+[SPRNETREST-4] - Fix GET request with custom headers for silverlight applications
+
+Task
+[SPRNETREST-2] - Update JSON.NET version to 4.0 Release 2
+[SPRNETREST-5] - Document use of Browser or Client HTTP Handling for silverlight applications

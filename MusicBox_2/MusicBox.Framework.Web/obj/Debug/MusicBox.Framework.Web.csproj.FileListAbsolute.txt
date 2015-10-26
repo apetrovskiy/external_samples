@@ -1,0 +1,16 @@
+C:\Projects\samples\MusicBox_2\MusicBox.Framework.Web\bin\Debug\Content\nancy-logo.png
+C:\Projects\samples\MusicBox_2\MusicBox.Framework.Web\bin\Debug\Views\index.cshtml
+C:\Projects\samples\MusicBox_2\MusicBox.Framework.Web\bin\Debug\MusicBox.Framework.Web.dll.config
+C:\Projects\samples\MusicBox_2\MusicBox.Framework.Web\bin\Debug\MusicBox.Framework.Web.dll
+C:\Projects\samples\MusicBox_2\MusicBox.Framework.Web\bin\Debug\MusicBox.Framework.Web.pdb
+C:\Projects\samples\MusicBox_2\MusicBox.Framework.Web\bin\Debug\Nancy.dll
+C:\Projects\samples\MusicBox_2\MusicBox.Framework.Web\bin\Debug\Nancy.Hosting.Self.dll
+C:\Projects\samples\MusicBox_2\MusicBox.Framework.Web\bin\Debug\Nancy.ViewEngines.Razor.dll
+C:\Projects\samples\MusicBox_2\MusicBox.Framework.Web\bin\Debug\System.Web.Razor.Unofficial.dll
+C:\Projects\samples\MusicBox_2\MusicBox.Framework.Web\bin\Debug\Nancy.xml
+C:\Projects\samples\MusicBox_2\MusicBox.Framework.Web\bin\Debug\Nancy.Hosting.Self.xml
+C:\Projects\samples\MusicBox_2\MusicBox.Framework.Web\bin\Debug\Nancy.ViewEngines.Razor.xml
+C:\Projects\samples\MusicBox_2\MusicBox.Framework.Web\bin\Debug\System.Web.Razor.Unofficial.pdb
+C:\Projects\samples\MusicBox_2\MusicBox.Framework.Web\obj\Debug\MusicBox.Framework.Web.csprojResolveAssemblyReference.cache
+C:\Projects\samples\MusicBox_2\MusicBox.Framework.Web\obj\Debug\MusicBox.Framework.Web.dll
+C:\Projects\samples\MusicBox_2\MusicBox.Framework.Web\obj\Debug\MusicBox.Framework.Web.pdb

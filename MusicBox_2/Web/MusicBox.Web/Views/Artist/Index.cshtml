@@ -1,0 +1,46 @@
+﻿@model IEnumerable<MusicBox.Web.Data.Artist>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+    @Html.Partial("~/Views/Shared/_SearchPartial.cshtml", new MusicBox.Web.Models.SearchModel() { SearchTerm = "Enter Artist Name"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ArtistName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArtistDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MusicBrainzID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArtistName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArtistDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MusicBrainzID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ArtistID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ArtistID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ArtistID })
+        </td>
+    </tr>
+}
+
+</table>

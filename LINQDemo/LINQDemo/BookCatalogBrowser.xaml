@@ -1,0 +1,99 @@
+﻿<!-- ******************************************************************
+     A LINQ Tutorial: Mapping Tables to Objects
+     By: Abby Fichtner, http://www.TheHackerChickBlog.com
+     Article URL: http://www.codeproject.com/KB/linq/linqtutorial.aspx
+     Licensed under The Code Project Open License (CPOL) 
+     ****************************************************************** -->
+    
+    <Window x:Class="LINQDemo.BookCatalogBrowser"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:LINQDemo="clr-namespace:LINQDemo"
+    xmlns:System="clr-namespace:System;assembly=mscorlib"
+    Title="LINQ Demo: Book Catalog" Height="400" Width="500">
+    <Window.Resources>
+        <LINQDemo:PriceConverter x:Key="priceDisplay"/>
+        
+        <Style TargetType="ListViewItem">
+            <Style.Resources>
+                <!-- Prevent list items from appearing like they've been selected -->
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Transparent" />
+                <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="Transparent" />
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" Color="{x:Static SystemColors.WindowTextColor}" />
+            </Style.Resources>
+        </Style>
+
+        <!-- How to display Book listings -->
+        <DataTemplate DataType="{x:Type LINQDemo:Book}">
+            <Border Name="border" BorderBrush="SlateBlue" BorderThickness="1" Padding="5" Margin="5">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="{Binding Path=Title}" FontWeight="Bold" FontSize="14"/>
+                    <TextBlock>Price: <TextBlock Text="{Binding Path=Price, Converter={StaticResource priceDisplay}}"/></TextBlock>
+                    <DockPanel LastChildFill="False">
+                        <TextBlock DockPanel.Dock="Right" VerticalAlignment="Bottom">Category: 
+                            <Hyperlink Click="LoadBooksForAttribute" CommandParameter="{Binding Path=Category}">
+                                   <TextBlock Text="{Binding Path=Category.Name}" FontWeight="Normal"/></Hyperlink></TextBlock>
+                        <WrapPanel DockPanel.Dock="Left">
+                            <TextBlock>By:</TextBlock>
+                            <ListView ItemsSource="{Binding Path=Authors}" HorizontalContentAlignment="Stretch" BorderThickness="0" >
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock><Hyperlink Click="LoadBooksForAttribute" CommandParameter="{Binding}"> 
+                                                   <TextBlock Text="{Binding Path=Name}"/></Hyperlink></TextBlock>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </WrapPanel>
+                    </DockPanel>
+                </StackPanel>
+            </Border>
+        </DataTemplate>
+
+        <!-- How to display Author listings -->
+        <DataTemplate DataType="{x:Type LINQDemo:Author}">
+            <Border Name="border" BorderBrush="Maroon" BorderThickness="1" Padding="5" Margin="5">
+                <StackPanel>
+                    <TextBlock Text="{Binding Path=Name}"  FontWeight="Bold" FontSize="14"/>
+                    <ListView ItemsSource="{Binding Path=Books}" HorizontalContentAlignment="Stretch" BorderThickness="0" >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock><Hyperlink Click="LoadIndividualBook" CommandParameter="{Binding}"><TextBlock Text="{Binding Path=Title}"/></Hyperlink></TextBlock>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
+            </Border>
+        </DataTemplate>
+
+        <!-- How to display Category listings -->
+        <DataTemplate DataType="{x:Type LINQDemo:Category}">
+            <Border Name="border" BorderBrush="ForestGreen" BorderThickness="1" Padding="5" Margin="5">
+                <StackPanel>
+                    <TextBlock Text="{Binding Path=Name}" FontWeight="Bold" FontSize="14"/>
+                    <ListView ItemsSource="{Binding Path=Books}" HorizontalContentAlignment="Stretch" BorderThickness="0" >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                    <Hyperlink Click="LoadIndividualBook" CommandParameter="{Binding}"><TextBlock Text="{Binding Path=Title}"/></Hyperlink>
+                                </TextBlock>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
+            </Border>
+        </DataTemplate>
+    </Window.Resources>
+    
+    <DockPanel>
+        <ToolBar DockPanel.Dock="Top" HorizontalContentAlignment="Stretch">
+            <Label FontWeight="Bold">Display:</Label>
+            <Button Name="BookButton" Click="DisplayBooks">All Books</Button><Separator></Separator>
+            <Button Name="AuthorButton" Click="DisplayAuthors">Authors</Button><Separator></Separator>
+            <Button Name="CategoryButton" Click="DisplayCategories" >Categories</Button><Separator></Separator>
+        </ToolBar>
+        <StatusBar DockPanel.Dock="Bottom" Height="24"><StatusBarItem Name="StatusText"></StatusBarItem></StatusBar>
+
+        <!-- See DataTemplates above for how the listings are displayed, it will vary based on what object type is being displayed -->
+        <ListView Name="Listing" ItemsSource="{Binding}" HorizontalContentAlignment="Stretch"/>
+    </DockPanel>
+</Window>

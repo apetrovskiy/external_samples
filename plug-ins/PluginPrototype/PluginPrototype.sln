@@ -1,0 +1,61 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginInterface", "PluginInterface\PluginInterface.csproj", "{00D0C21D-D94C-4B0F-A710-1EFBABB4C4C6}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host", "Host\Host.csproj", "{6FA2ED30-D723-480A-9C5C-1C77C4E75D0F}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin1", "Plugin1\Plugin1.csproj", "{6DEE618D-9BD9-46E0-B202-E10AAC51AA05}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin2", "Plugin2\Plugin2.csproj", "{ED8E2173-836A-460B-9D00-C90237228721}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin3", "Plugin3\Plugin3.csproj", "{146A1C6B-5F62-4A6C-9759-9115C6E39CA3}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin4", "Plugin4\Plugin4.csproj", "{904CD00C-4CDF-4913-A330-9F60A9EAAD41}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{00D0C21D-D94C-4B0F-A710-1EFBABB4C4C6}.Debug.ActiveCfg = Debug|.NET
+		{00D0C21D-D94C-4B0F-A710-1EFBABB4C4C6}.Debug.Build.0 = Debug|.NET
+		{00D0C21D-D94C-4B0F-A710-1EFBABB4C4C6}.Release.ActiveCfg = Release|.NET
+		{00D0C21D-D94C-4B0F-A710-1EFBABB4C4C6}.Release.Build.0 = Release|.NET
+		{6FA2ED30-D723-480A-9C5C-1C77C4E75D0F}.Debug.ActiveCfg = Debug|.NET
+		{6FA2ED30-D723-480A-9C5C-1C77C4E75D0F}.Debug.Build.0 = Debug|.NET
+		{6FA2ED30-D723-480A-9C5C-1C77C4E75D0F}.Release.ActiveCfg = Release|.NET
+		{6FA2ED30-D723-480A-9C5C-1C77C4E75D0F}.Release.Build.0 = Release|.NET
+		{6DEE618D-9BD9-46E0-B202-E10AAC51AA05}.Debug.ActiveCfg = Debug|.NET
+		{6DEE618D-9BD9-46E0-B202-E10AAC51AA05}.Debug.Build.0 = Debug|.NET
+		{6DEE618D-9BD9-46E0-B202-E10AAC51AA05}.Release.ActiveCfg = Release|.NET
+		{6DEE618D-9BD9-46E0-B202-E10AAC51AA05}.Release.Build.0 = Release|.NET
+		{ED8E2173-836A-460B-9D00-C90237228721}.Debug.ActiveCfg = Debug|.NET
+		{ED8E2173-836A-460B-9D00-C90237228721}.Debug.Build.0 = Debug|.NET
+		{ED8E2173-836A-460B-9D00-C90237228721}.Release.ActiveCfg = Release|.NET
+		{ED8E2173-836A-460B-9D00-C90237228721}.Release.Build.0 = Release|.NET
+		{146A1C6B-5F62-4A6C-9759-9115C6E39CA3}.Debug.ActiveCfg = Debug|.NET
+		{146A1C6B-5F62-4A6C-9759-9115C6E39CA3}.Debug.Build.0 = Debug|.NET
+		{146A1C6B-5F62-4A6C-9759-9115C6E39CA3}.Release.ActiveCfg = Release|.NET
+		{146A1C6B-5F62-4A6C-9759-9115C6E39CA3}.Release.Build.0 = Release|.NET
+		{904CD00C-4CDF-4913-A330-9F60A9EAAD41}.Debug.ActiveCfg = Debug|.NET
+		{904CD00C-4CDF-4913-A330-9F60A9EAAD41}.Debug.Build.0 = Debug|.NET
+		{904CD00C-4CDF-4913-A330-9F60A9EAAD41}.Release.ActiveCfg = Release|.NET
+		{904CD00C-4CDF-4913-A330-9F60A9EAAD41}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

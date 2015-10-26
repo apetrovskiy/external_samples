@@ -1,0 +1,8 @@
+C:\Users\Johnny\Downloads\OSVersionInfoDLL\bin\Debug\OSVersionInfo.dll.config
+C:\Users\Johnny\Downloads\OSVersionInfoDLL\bin\Debug\OSVersionInfo.dll
+C:\Users\Johnny\Downloads\OSVersionInfoDLL\bin\Debug\OSVersionInfo.pdb
+C:\Users\Johnny\Downloads\OSVersionInfoDLL\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Johnny\Downloads\OSVersionInfoDLL\obj\Debug\JCS.Properties.Resources.resources
+C:\Users\Johnny\Downloads\OSVersionInfoDLL\obj\Debug\OSVersionInfoDLL.csproj.GenerateResource.Cache
+C:\Users\Johnny\Downloads\OSVersionInfoDLL\obj\Debug\OSVersionInfo.dll
+C:\Users\Johnny\Downloads\OSVersionInfoDLL\obj\Debug\OSVersionInfo.pdb

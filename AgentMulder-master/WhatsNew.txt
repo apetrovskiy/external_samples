@@ -1,0 +1,82 @@
+What's new in Agent Mulder
+==========================
+
+v1.1.2
+======
+
++ Added support for ReSharper 8.2 (installed via the Extensions Gallery)
+
+v1.1.1
+======
+
++ Added support for ReSharper 8.1 (installed via the Extensions Gallery)
+
+v1.1.0.0
+========
+
++ Added support for ReSharper 8 (installed via the Extensions Gallery)
+  Agent Mulder now supports ReSharper 6, 7 and 8
++ Added support for SimpleInjector (https://github.com/hmemcpy/AgentMulder/wiki/Simple-Injector)
+* Fixed several performace issues
+! Known issue: "Navigate to..." feature is currently disabled!
+
+
+v1.0.5.1
+========
+* Fixed StructureMap, so types having private constructors aren't picked up during scan
+
+v1.0.5
+======
+
++ ReSharper 7.1 support (7.0 support removed, please upgrade to 7.1)
++ Support for StructureMap (https://github.com/hmemcpy/AgentMulder/wiki/StructureMap)
++ Support for Catel IoC (part of Catel framework) (https://github.com/hmemcpy/AgentMulder/wiki/Catel-IoC)
+* Numerous performace improvements and bug fixes
+ 
+
+v1.0.4.2
+======
+* Fixed a navigation issue caused by ReSharper 7 API change in build 80 (RSRP-321616)
+  Note: you should update ReSharper 7 to the latest version (7.0.80.93 at the time of writing)
+
+
+v1.0.4.1
+========
++ Adding support for ReSharper 7 (known issue: icon is different)
+
+
+v1.0.4
+======
++ Initial support for Autofac (https://github.com/hmemcpy/AgentMulder/wiki/Autofac)
+* Miscellaneous bug fixes
+
+
+v1.0.3.1 - Hotfix
+=================
+* Fixed a bug where Ninject registration wasn't picked up by Agent Mulder (issue #10)
+
+
+v1.0.3
+======
++ Initial support for Unity (https://github.com/hmemcpy/AgentMulder/wiki/Unity)
+
+
+v1.0.2
+======
++ Initial support for Ninject (https://github.com/hmemcpy/AgentMulder/wiki/Ninject)
+
+
+v1.0.1
+======
++ Castle Windsor: Added support for .Pick()
++ Castle Windsor: Added support for .Where() that takes in the following methods:
+  * Component.HasAttribute<T> (as a method group, not lambda expression)
+  * Component.IsInNamespace
+  * Component.IsInSameNamespaceAs (both generic and non-generic)
++ Added a new installer, based on the free edition of Advanced Installer (http://www.advancedinstaller.com)
+
+
+v1.0.0
+======
+ * First public release
+ + Support for Castle Windsor

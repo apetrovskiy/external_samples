@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Chat</title>
+
+    <link rel="stylesheet" type="text/css" href="@Path['~/Content/bootstrap.min.css']" />
+    <link rel="stylesheet" type="text/css" href="@Path['~/Content/bootstrap-responsive.min.css']" />
+</head>
+<body>
+    <div class="container">
+        <div class="well well-large span10 text-center">
+            <h1>Say something interesting</h1>
+            <p>@Model.UtcNow</p>
+        </div>
+        
+        <div class="span10">
+            <form class="form-horizontal" id="form">
+                <input type="text" class="span8" id="message" placeholder="Type something" />
+                <input type="submit" class="btn btn-primary span2" value="Send" />
+            </form>
+        </div>
+    
+        <div class="span10">
+            <ul id="messages" class="unstyled">
+            </ul>
+        </div>
+    </div>
+
+    <script src="@Path['~/Scripts/jquery-1.9.1.min.js']"></script>
+    <script src="@Path['~/Scripts/json2.min.js']"></script>
+    <script src="@Path['~/Scripts/jquery.signalR-1.1.2.min.js']"></script>
+    <script src="@Path['~/Scripts/bootstrap.min.js']"></script>
+    <script src="@Path['~/signalr/hubs']"></script>
+
+    <script>
+        function appendMessage(message) {
+            var x = $('<div></div>').text(message).html();
+            $('#messages').append('<li>' + x + '</li>');
+        }
+
+        $(document).ready(function () {
+            var chatHub = $.connection.chatHub;
+
+            chatHub.client.broadcastMessage = function (message) {
+                appendMessage(message);
+            };
+
+            $.connection.hub.start().done(function () {
+                appendMessage('Connected.');
+                $('#form').submit(function (event) {
+                    event.preventDefault();
+
+                    var message = $('#message').val();
+                    chatHub.server.send(message);
+                    $('#message').val('');
+                    return false;
+                });
+            });
+        });
+    </script>
+</body>
+</html>

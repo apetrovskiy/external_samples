@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book[
+  <!ENTITY introduction             SYSTEM "introduction.xml">
+  <!ENTITY rest-client              SYSTEM "rest-client.xml">
+  <!ENTITY http-messageconversion   SYSTEM "http-messageconversion.xml">
+]>
+<book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://docbook.org/ns/docbook/xi" version="5.0" xml:lang="en">
+  <bookinfo>
+    <!-- auto-generated -->
+    <title>Spring.NET REST Client Framework</title>
+    <subtitle>Reference Documentation</subtitle>
+    <!-- auto-generated -->
+    <releaseinfo>1.2.0</releaseinfo>
+    <!-- auto-generated -->
+    <copyright>Copyright 2012 SpringSource</copyright>
+    <!-- auto-generated -->
+    <pubdate>Last Updated 9/18/2012</pubdate>
+    <authorgroup>
+      <author>
+        <firstname>Arjen</firstname>
+        <surname>Poutsma</surname>
+      </author>
+      <author>
+        <firstname>Bruno</firstname>
+        <surname>Baia</surname>
+      </author>
+    </authorgroup>
+    <legalnotice>
+      <para>
+        Copies of this document may be made for your own use and for distribution
+        to others, provided that you do not charge any fee for such copies and
+        further provided that each copy contains this Copyright Notice, whether
+        distributed in print or electronically.
+      </para>
+    </legalnotice>
+  </bookinfo>
+  <toc />&introduction;&rest-client;&http-messageconversion;</book>

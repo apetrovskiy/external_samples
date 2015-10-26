@@ -1,0 +1,20 @@
+c:\users\administrator\documents\visual studio 2012\Projects\HelloWorldQuartzDotNet\HelloWorldQuartzDotNet\bin\Debug\HelloWorldQuartzDotNet.exe.config
+c:\users\administrator\documents\visual studio 2012\Projects\HelloWorldQuartzDotNet\HelloWorldQuartzDotNet\bin\Debug\HelloWorldQuartzDotNet.exe
+c:\users\administrator\documents\visual studio 2012\Projects\HelloWorldQuartzDotNet\HelloWorldQuartzDotNet\bin\Debug\HelloWorldQuartzDotNet.pdb
+c:\users\administrator\documents\visual studio 2012\Projects\HelloWorldQuartzDotNet\HelloWorldQuartzDotNet\bin\Debug\C5.dll
+c:\users\administrator\documents\visual studio 2012\Projects\HelloWorldQuartzDotNet\HelloWorldQuartzDotNet\bin\Debug\Common.Logging.dll
+c:\users\administrator\documents\visual studio 2012\Projects\HelloWorldQuartzDotNet\HelloWorldQuartzDotNet\bin\Debug\Quartz.dll
+c:\users\administrator\documents\visual studio 2012\Projects\HelloWorldQuartzDotNet\HelloWorldQuartzDotNet\bin\Debug\Quartz.pdb
+c:\users\administrator\documents\visual studio 2012\Projects\HelloWorldQuartzDotNet\HelloWorldQuartzDotNet\obj\Debug\HelloWorldQuartzDotNet.exe
+c:\users\administrator\documents\visual studio 2012\Projects\HelloWorldQuartzDotNet\HelloWorldQuartzDotNet\obj\Debug\HelloWorldQuartzDotNet.pdb
+C:\Users\Administrator\documents\visual studio 2012\Projects\HelloWorldQuartzDotNet\HelloWorldQuartzDotNet\bin\Debug\Common.Logging.Log4Net.dll
+C:\Users\Administrator\documents\visual studio 2012\Projects\HelloWorldQuartzDotNet\HelloWorldQuartzDotNet\bin\Debug\log4net.dll
+C:\Users\Administrator\documents\visual studio 2012\Projects\HelloWorldQuartzDotNet\HelloWorldQuartzDotNet\obj\Debug\HelloWorldQuartzDotNet.csprojResolveAssemblyReference.cache
+C:\Projects\samples\HelloWorldQuartzDotNet\HelloWorldQuartzDotNet\bin\Debug\HelloWorldQuartzDotNet.exe.config
+C:\Projects\samples\HelloWorldQuartzDotNet\HelloWorldQuartzDotNet\obj\Debug\HelloWorldQuartzDotNet.exe
+C:\Projects\samples\HelloWorldQuartzDotNet\HelloWorldQuartzDotNet\obj\Debug\HelloWorldQuartzDotNet.pdb
+C:\Projects\samples\HelloWorldQuartzDotNet\HelloWorldQuartzDotNet\bin\Debug\HelloWorldQuartzDotNet.exe
+C:\Projects\samples\HelloWorldQuartzDotNet\HelloWorldQuartzDotNet\bin\Debug\HelloWorldQuartzDotNet.pdb
+C:\Projects\samples\HelloWorldQuartzDotNet\HelloWorldQuartzDotNet\bin\Debug\C5.dll
+C:\Projects\samples\HelloWorldQuartzDotNet\HelloWorldQuartzDotNet\bin\Debug\Quartz.pdb
+C:\Projects\samples\HelloWorldQuartzDotNet\HelloWorldQuartzDotNet\obj\Debug\HelloWorldQuartzDotNet.csprojResolveAssemblyReference.cache

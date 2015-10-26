@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9CED0C38-BCEB-4BFC-9294-38455758A461}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MSTestAllureAdapter</RootNamespace>
+    <AssemblyName>MSTestAllureAdapter</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TRXParser\TRXParser.cs" />
+    <Compile Include="MSTestResult.cs" />
+    <Compile Include="AllureEvents\TestCaseStartedWithTimeEvent.cs" />
+    <Compile Include="AllureEvents\TestCaseFinishedWithTimeEvent.cs" />
+    <Compile Include="AllureEvents\TestSuiteStartedWithTimeEvent.cs" />
+    <Compile Include="AllureEvents\TestSuiteFinishedWithTimeEvent.cs" />
+    <Compile Include="Utils\AllureResultsUtils.cs" />
+    <Compile Include="AllureEvents\TestCaseFailureWithErrorInfoEvent.cs" />
+    <Compile Include="AllureAdapter.cs" />
+    <Compile Include="TRXParser\XElementExtensions.cs" />
+    <Compile Include="TRXParser\ErrorInfo.cs" />
+    <Compile Include="Utils\MSTestResultUtils.cs" />
+    <Compile Include="ITestResultProvider.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\allure-csharp-commons\AllureCSharpCommons\AllureCSharpCommons.csproj">
+      <Project>{0c358997-150b-4752-8b69-8b174167d730}</Project>
+      <Name>AllureCSharpCommons</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TRXParser\vstst\vstst.xsd" />
+  </ItemGroup>
+</Project>

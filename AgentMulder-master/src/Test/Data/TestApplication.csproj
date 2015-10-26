@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2A40748D-310D-4193-A2E8-079A53040A93}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestApplication</RootNamespace>
+    <AssemblyName>TestApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\TestApplication.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\TestApplication.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Configuration, Version=3.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Autofac.3.0.1\lib\net40\Autofac.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc">
+      <HintPath>..\..\packages\Autofac.Mvc5.3.3.2\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.WebApi">
+      <HintPath>..\..\packages\Autofac.WebApi.3.1.0\lib\net40\Autofac.Integration.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Castle.Core.3.3.0\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Castle.Windsor.3.3.0\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="Catel.Core, Version=3.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Catel.Core.3.9.0\lib\net40\Catel.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention">
+      <HintPath>..\..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleInjector, Version=2.5.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\SimpleInjector.2.5.2\lib\net45\SimpleInjector.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleInjector.Diagnostics, Version=2.5.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\SimpleInjector.2.5.2\lib\net45\SimpleInjector.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap, Version=3.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\structuremap.3.1.1.134\lib\net40\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap.Net4">
+      <HintPath>..\..\packages\structuremap.3.1.1.134\lib\net40\StructureMap.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.1.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.2\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.Mvc.5.1.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.Razor.3.1.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.1.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.1.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.1.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Autofac\Mvc\RegisterControllers.cs" />
+    <Compile Include="Autofac\Mvc\RegisterWebApiControllers.cs" />
+    <Compile Include="Autofac\RegisterAssemblyTypesTests\AllThreeTogether.cs" />
+    <Compile Include="Autofac\RegisterAssemblyTypesTests\AsClosedTypesOf.cs" />
+    <Compile Include="Autofac\RegisterAssemblyTypesTests\AsGeneric1.cs" />
+    <Compile Include="Autofac\RegisterAssemblyTypesTests\AsGeneric2.cs" />
+    <Compile Include="Autofac\RegisterAssemblyTypesTests\AsImplementedInterfaces.cs" />
+    <Compile Include="Autofac\RegisterAssemblyTypesTests\AsNonGeneric1.cs" />
+    <Compile Include="Autofac\RegisterAssemblyTypesTests\AsNonGeneric2.cs" />
+    <Compile Include="Autofac\RegisterAssemblyTypesTests\AssignableToGeneric1.cs" />
+    <Compile Include="Autofac\RegisterAssemblyTypesTests\AssignableToGeneric2.cs" />
+    <Compile Include="Autofac\RegisterAssemblyTypesTests\AssignableToNonGeneric1.cs" />
+    <Compile Include="Autofac\RegisterAssemblyTypesTests\AssignableToNonGeneric2.cs" />
+    <Compile Include="Autofac\RegisterAssemblyTypesTests\Except1.cs" />
+    <Compile Include="Autofac\RegisterAssemblyTypesTests\Except2.cs" />
+    <Compile Include="Autofac\RegisterAssemblyTypesTests\ExceptWithArgument.cs" />
+    <Compile Include="Autofac\RegisterAssemblyTypesTests\FromGetExecutingAssembly.cs" />
+    <Compile Include="Autofac\RegisterAssemblyTypesTests\FromThisAssemblyModuleProperty.cs" />
+    <Compile Include="Autofac\RegisterAssemblyTypesTests\FromAssemblyTypeOf.cs" />
+    <Compile Include="Autofac\RegisterAssemblyTypesTests\InNamespaceString.cs" />
+    <Compile Include="Autofac\RegisterAssemblyTypesTests\InNamespaceOfType.cs" />
+    <Compile Include="Autofac\RegisterAssemblyTypesTests\NoAssembly.cs" />
+    <Compile Include="Autofac\RegisterComplex.cs" />
+    <Compile Include="Autofac\RegisterComplexWithVariable.cs" />
+    <Compile Include="Autofac\RegisterNewObject.cs" />
+    <Compile Include="Autofac\RegisterNewObjectAsInterface.cs" />
+    <Compile Include="Autofac\RegisterWithActivatorCreateInstance.cs" />
+    <Compile Include="Autofac\RegisterWithCastToObject.cs" />
+    <Compile Include="Autofac\RegisterNonSpecificObjectAsService.cs" />
+    <Compile Include="Autofac\RegisterTypeGeneric.cs" />
+    <Compile Include="Autofac\RegisterTypeNonGeneric.cs" />
+    <Compile Include="Autofac\RegisterWithCreationMethod.cs" />
+    <Compile Include="Autofac\RegisterWithLambdaDirectCast.cs" />
+    <Compile Include="Autofac\RegisterWithLambdaAs.cs" />
+    <Compile Include="Autofac\RegisterWithLambdaMethodCall.cs" />
+    <Compile Include="Autofac\RegisterWithLambda.cs" />
+    <Compile Include="Autofac\RegisterWithLambdaInitializer.cs" />
+    <Compile Include="Autofac\RegisterWithLambdaTakesDependency.cs" />
+    <Compile Include="Catel\RegisterTypeGeneric.cs" />
+    <Compile Include="Catel\RegisterTypeGenericWithArgument.cs" />
+    <Compile Include="Catel\RegisterTypeIfNotYetRegisteredGeneric.cs" />
+    <Compile Include="Catel\RegisterTypeIfNotYetRegisteredNonGeneric.cs" />
+    <Compile Include="Catel\RegisterTypeNonGeneric.cs" />
+    <Compile Include="Catel\RegisterTypeNonGenericWithArgument.cs" />
+    <Compile Include="Ninject\KernelTestCases\BindGenericToGeneric.cs" />
+    <Compile Include="Ninject\KernelTestCases\BindGenericToNonGeneric.cs" />
+    <Compile Include="Ninject\KernelTestCases\BindGenericToSelf.cs" />
+    <Compile Include="Ninject\KernelTestCases\BindNonGenericToGeneric.cs" />
+    <Compile Include="Ninject\KernelTestCases\BindNonGenericToNonGeneric.cs" />
+    <Compile Include="Ninject\KernelTestCases\BindNonGenericToSelf.cs" />
+    <Compile Include="Ninject\KernelTestCases\BindFromKernel.cs" />
+    <Compile Include="Ninject\KernelTestCases\GenericOpenType.cs" />
+    <Compile Include="Ninject\KernelTestCases\RebindGenericToGeneric.cs" />
+    <Compile Include="Ninject\KernelTestCases\RebindGenericToNonGeneric.cs" />
+    <Compile Include="Ninject\KernelTestCases\RebindGenericToSelf.cs" />
+    <Compile Include="Ninject\KernelTestCases\RebindNonGenericToGeneric.cs" />
+    <Compile Include="Ninject\KernelTestCases\RebindNonGenericToNonGeneric.cs" />
+    <Compile Include="Ninject\KernelTestCases\RebindNonGenericToSelf.cs" />
+    <Compile Include="Ninject\MethodNamedBindInThisClass.cs" />
+    <Compile Include="Ninject\MethodNamedBindOnSomeClass.cs" />
+    <Compile Include="Ninject\ModuleTestCases\ModuleBindGenericToGeneric.cs" />
+    <Compile Include="Ninject\ModuleTestCases\ModuleBindGenericToNonGeneric.cs" />
+    <Compile Include="Ninject\ModuleTestCases\ModuleBindGenericToSelf.cs" />
+    <Compile Include="Ninject\ModuleTestCases\ModuleBindNonGenericToGeneric.cs" />
+    <Compile Include="Ninject\ModuleTestCases\ModuleBindNonGenericToNonGeneric.cs" />
+    <Compile Include="StructureMap\SkipsStaticClasses.cs" />
+    <Compile Include="Types\Enum.cs" />
+    <Compile Include="Types\MyMvcController.cs" />
+    <Compile Include="Types\MyWebApiController.cs" />
+    <Compile Include="Types\Static.cs" />
+    <Compile Include="Types\Struct.cs" />
+    <Compile Include="Windsor\TestCases\SkipEnumAndStructs.cs" />
+    <Compile Include="Windsor\TestCases\SkipsStaticClasses.cs" />
+    <Compile Include="Windsor\UsingFQN.cs" />
+    <Compile Include="Windsor\UsingsInsideNamespace.cs" />
+    <None Include="app.config" />
+    <None Include="Ninject\_DoesNotCompile-BrokenReference.cs" />
+    <Compile Include="Ninject\ModuleTestCases\ModuleBindNonGenericToSelf.cs" />
+    <Compile Include="Ninject\ModuleTestCases\ModuleGenericOpenType.cs" />
+    <Compile Include="Ninject\ModuleTestCases\ModuleRebindGenericToGeneric.cs" />
+    <Compile Include="Ninject\ModuleTestCases\ModuleRebindGenericToNonGeneric.cs" />
+    <Compile Include="Ninject\ModuleTestCases\ModuleRebindGenericToSelf.cs" />
+    <Compile Include="Ninject\ModuleTestCases\ModuleRebindNonGenericToGeneric.cs" />
+    <Compile Include="Ninject\ModuleTestCases\ModuleRebindNonGenericToNonGeneric.cs" />
+    <Compile Include="Ninject\ModuleTestCases\ModuleRebindNonGenericToSelf.cs" />
+    <Compile Include="SimpleInjector\RegisterAll3Generic.cs" />
+    <Compile Include="SimpleInjector\RegisterOpenGenericLifestyleNonGeneric.cs" />
+    <Compile Include="SimpleInjector\RegisterOpenGenericNonGeneric.cs" />
+    <Compile Include="SimpleInjector\LifestyleCreateRegistrationGeneric.cs" />
+    <Compile Include="SimpleInjector\LifestyleCreateRegistrationNonGeneric.cs" />
+    <Compile Include="SimpleInjector\RegisterAll2Generic.cs" />
+    <Compile Include="SimpleInjector\RegisterAllGeneric.cs" />
+    <Compile Include="SimpleInjector\RegisterConcreteSingletonGeneric.cs" />
+    <Compile Include="SimpleInjector\RegisterConcreteTransientGeneric.cs" />
+    <Compile Include="SimpleInjector\RegisterConcreteTransientNonGeneric.cs" />
+    <Compile Include="SimpleInjector\RegisterDecoratorLifestyleNonGeneric.cs" />
+    <Compile Include="SimpleInjector\RegisterDecoratorLifestylePredicateNonGeneric.cs" />
+    <Compile Include="SimpleInjector\RegisterDecoratorNonGeneric.cs" />
+    <Compile Include="SimpleInjector\RegisterDecoratorPredicateNonGeneric.cs" />
+    <Compile Include="SimpleInjector\RegisterLifestyleGeneric.cs" />
+    <Compile Include="SimpleInjector\RegisterLifestyleNonGeneric.cs" />
+    <Compile Include="SimpleInjector\RegisterNonGeneric.cs" />
+    <Compile Include="SimpleInjector\RegisterSingleDecoratorNonGeneric.cs" />
+    <Compile Include="SimpleInjector\RegisterSingleDecoratorPredicateNonGeneric.cs" />
+    <Compile Include="SimpleInjector\RegisterSingleOpenGenericNonGeneric.cs" />
+    <Compile Include="SimpleInjector\RegisterSingletonGeneric.cs" />
+    <Compile Include="SimpleInjector\RegisterSingletonNonGeneric.cs" />
+    <Compile Include="SimpleInjector\RegisterTransientGeneric.cs" />
+    <Compile Include="SimpleInjector\RegisterTransientNonGeneric.cs" />
+    <Compile Include="StructureMap\ContainerTests\RegistryForNonGenericUseNonGenericTypeOf.cs" />
+    <Compile Include="StructureMap\ContainerTests\RegistryForNonGenericAddNonGenericTypeOf.cs" />
+    <Compile Include="StructureMap\ContainerTests\RegistryForGenericUseGenericWithAdditionalParams.cs" />
+    <Compile Include="StructureMap\ContainerTests\RegistryForGenericUseGenericMultipleStatements.cs" />
+    <Compile Include="StructureMap\ContainerTests\RegistryForGenericUseGenericExpression.cs" />
+    <Compile Include="StructureMap\ContainerTests\RegistryForGenericAddGenericMultipleStatements.cs" />
+    <Compile Include="StructureMap\ContainerTests\ForGenericAddGenericExpression.cs" />
+    <Compile Include="StructureMap\ContainerTests\ForGenericAddGenericMultipleStatements.cs" />
+    <Compile Include="StructureMap\ContainerTests\ForGenericAddGenericStatement.cs" />
+    <Compile Include="StructureMap\ContainerTests\ForGenericUseGenericExpression.cs" />
+    <Compile Include="StructureMap\ContainerTests\ForGenericUseGenericMultipleStatements.cs" />
+    <Compile Include="StructureMap\ContainerTests\ForGenericUseGenericStatement.cs" />
+    <Compile Include="StructureMap\ContainerTests\ForGenericUseGenericWithAdditionalParams.cs" />
+    <Compile Include="StructureMap\ContainerTests\ForNonGenericAddNonGenericTypeOf.cs" />
+    <Compile Include="StructureMap\ContainerTests\ForNonGenericUseNonGenericTypeof.cs" />
+    <Compile Include="StructureMap\ContainerTests\ObjectFactoryContainerConfigure.cs" />
+    <Compile Include="StructureMap\ContainerTests\RegistryForGenericAddGenericExpression.cs" />
+    <Compile Include="StructureMap\MethodNamedForInThisClass.cs" />
+    <Compile Include="StructureMap\MethodNamedForOnSomeClass.cs" />
+    <Compile Include="StructureMap\ContainerTests\RegistryInstanceConfigure.cs" />
+    <Compile Include="StructureMap\ScanTests\RegistryScanAssemblyContainigTypeGeneric.cs" />
+    <Compile Include="StructureMap\ScanTests\RegistryScanAssemblyContainigTypeNonGeneric.cs" />
+    <Compile Include="StructureMap\ScanTests\RegistryScanAssemblyGetExecutingAssembly.cs" />
+    <Compile Include="StructureMap\ScanTests\RegistryScanAssemblyTypeofTAssembly.cs" />
+    <Compile Include="StructureMap\ScanTests\RegistryScanNoAssemblyStatement.cs" />
+    <Compile Include="StructureMap\ScanTests\RegistryScanTheCallingAssembly.cs" />
+    <Compile Include="StructureMap\ScanTests\RegistryScanTheCallingAssemblyAddAllTypesOfGeneric.cs" />
+    <Compile Include="StructureMap\ScanTests\RegistryScanTheCallingAssemblyAddAllTypesOfNonGeneric.cs" />
+    <Compile Include="StructureMap\ScanTests\RegistryScanTheCallingAssemblyExcludeNamespace.cs" />
+    <Compile Include="StructureMap\ScanTests\RegistryScanTheCallingAssemblyExcludeNamespaceContainingType.cs" />
+    <Compile Include="StructureMap\ScanTests\RegistryScanTheCallingAssemblyExcludeType.cs" />
+    <Compile Include="StructureMap\ScanTests\RegistryScanTheCallingAssemblyIncludeNamespace.cs" />
+    <Compile Include="StructureMap\ScanTests\RegistryScanTheCallingAssemblyIncludeNamespaceContainingType.cs" />
+    <Compile Include="StructureMap\ScanTests\RegistryScanTheCallingAssemblyRegisterConcreteTypesAgainstTheFirstInterface.cs" />
+    <Compile Include="StructureMap\ScanTests\RegistryScanTheCallingAssemblySingleImplementationsOfInterface.cs" />
+    <Compile Include="StructureMap\ScanTests\RegistryScanTheCallingAssemblyWithDefaultConventions.cs" />
+    <Compile Include="StructureMap\ScanTests\ScanAssemblyContainigTypeGeneric.cs" />
+    <Compile Include="StructureMap\ScanTests\ScanAssemblyContainigTypeNonGeneric.cs" />
+    <Compile Include="StructureMap\ScanTests\ScanAssemblyGetExecutingAssembly.cs" />
+    <Compile Include="StructureMap\ScanTests\ScanAssemblyTypeofTAssembly.cs" />
+    <Compile Include="StructureMap\ScanTests\ScanNoAssemblyStatement.cs" />
+    <Compile Include="StructureMap\ScanTests\ScanTheCallingAssembly.cs" />
+    <Compile Include="StructureMap\ScanTests\ScanTheCallingAssemblyAddAllTypesOfGeneric.cs" />
+    <Compile Include="StructureMap\ScanTests\ScanTheCallingAssemblyAddAllTypesOfNonGeneric.cs" />
+    <Compile Include="StructureMap\ScanTests\ScanTheCallingAssemblyExcludeNamespace.cs" />
+    <Compile Include="StructureMap\ScanTests\ScanTheCallingAssemblyExcludeNamespaceContainingType.cs" />
+    <Compile Include="StructureMap\ScanTests\ScanTheCallingAssemblyExcludeType.cs" />
+    <Compile Include="StructureMap\ScanTests\ScanTheCallingAssemblyIncludeNamespace.cs" />
+    <Compile Include="StructureMap\ScanTests\ScanTheCallingAssemblyIncludeNamespaceContainingType.cs" />
+    <Compile Include="StructureMap\ScanTests\ScanTheCallingAssemblyRegisterConcreteTypesAgainstTheFirstInterface.cs" />
+    <Compile Include="StructureMap\ScanTests\ScanTheCallingAssemblySingleImplementationsOfInterface.cs" />
+    <Compile Include="StructureMap\ScanTests\ScanTheCallingAssemblyWithDefaultConventions.cs" />
+    <None Include="StructureMap\_DoesNotCompile-BrokenReference.cs" />
+    <Compile Include="StructureMap\TypeWithPrivateConstructor.cs" />
+    <Compile Include="Types\TinyIoC.cs" />
+    <Compile Include="TinyIoC\RegisterGeneric.cs" />
+    <Compile Include="Types\SaveCommand.cs" />
+    <Compile Include="Types\Bar.cs" />
+    <Compile Include="Types\BaseCommonComponent.cs" />
+    <Compile Include="Types\Baz.cs" />
+    <Compile Include="Types\CommonImpl1.cs" />
+    <Compile Include="Types\CommonImpl12.cs" />
+    <Compile Include="Types\CommonImpl123.cs" />
+    <Compile Include="Types\CommonImpl1234.cs" />
+    <Compile Include="Types\CommonImpl2.cs" />
+    <Compile Include="Types\CommonSub1Impl.cs" />
+    <Compile Include="Types\Context.cs" />
+    <Compile Include="Types\CreditCard.cs" />
+    <Compile Include="Types\Foo.cs" />
+    <Compile Include="Types\FooBar.cs" />
+    <Compile Include="Types\GoldCard.cs" />
+    <Compile Include="Types\HaveAttribute.cs" />
+    <Compile Include="Types\ICommand.cs" />
+    <Compile Include="Types\IBar.cs" />
+    <Compile Include="Types\ICommon.cs" />
+    <Compile Include="Types\ICommon2.cs" />
+    <Compile Include="Types\ICommon3.cs" />
+    <Compile Include="Types\ICommonSub1.cs" />
+    <Compile Include="Types\IFoo.cs" />
+    <Compile Include="Types\ICommon4.cs" />
+    <Compile Include="Types\IInSomeNamespace.cs" />
+    <Compile Include="Types\IInSomeOtherNamespace.cs" />
+    <Compile Include="Types\InSomeNamespace.cs" />
+    <Compile Include="Types\InSomeOtherNamespace.cs" />
+    <Compile Include="Types\IPageRepository.cs" />
+    <Compile Include="Types\IPrimitiveArgument.cs" />
+    <Compile Include="Types\IRepository.cs" />
+    <Compile Include="Types\ISingle.cs" />
+    <Compile Include="Types\MyAttribute.cs" />
+    <Compile Include="Types\MyList.cs" />
+    <Compile Include="Types\MyStruct.cs" />
+    <Compile Include="Types\Page.cs" />
+    <Compile Include="Types\PageRepository.cs" />
+    <Compile Include="Types\PlatinumCard.cs" />
+    <Compile Include="Types\PrimitiveArgument.cs" />
+    <Compile Include="Types\PrivateCtor.cs" />
+    <Compile Include="Types\Repository.cs" />
+    <Compile Include="Types\SaveCommandData.cs" />
+    <Compile Include="Types\Single.cs" />
+    <Compile Include="Types\SomeClass.cs" />
+    <Compile Include="Types\StandardCard.cs" />
+    <Compile Include="Types\TakesDependency.cs" />
+    <Compile Include="Types\TwoInterfacesImpl.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Unity\RegisterTypeGenericFromTo.cs" />
+    <Compile Include="Unity\RegisterTypeGenericFromTo3TimesIsTheCharm.cs" />
+    <Compile Include="Unity\RegisterTypeGenericFromTo2Times.cs" />
+    <Compile Include="Unity\RegisterTypeNonGenericFromTo.cs" />
+    <Compile Include="Unity\RegisterTypeNonGenericFromToExtraArguments.cs" />
+    <Compile Include="Unity\RegisterTypeOpenGenericType.cs" />
+    <Compile Include="Unity\RegisterTypeSingleGeneric.cs" />
+    <Compile Include="Unity\RegisterTypeSingleNonGeneric.cs" />
+    <Compile Include="Windsor\ComponentTestCases\ComponentFor2GenericImplementedbyGeneric.cs" />
+    <Compile Include="Windsor\ComponentTestCases\ComponentFor3GenericImplementedbyGeneric.cs" />
+    <Compile Include="Windsor\ComponentTestCases\ComponentFor4GenericImplementedByGeneric.cs" />
+    <Compile Include="Windsor\ComponentTestCases\ComponentFor5GenericImplementedByGeneric.cs" />
+    <Compile Include="Windsor\TestCases\FromAssemblyContainingBasedOnNonGeneric.cs" />
+    <Compile Include="Windsor\TestCases\FromAssemblyContainingBasedOnGeneric.cs" />
+    <Compile Include="Windsor\TestCases\FromAssemblyContainingPick.cs" />
+    <Compile Include="Windsor\TestCases\FromAssemblyGetExecutingAssemblyPick.cs" />
+    <Compile Include="Windsor\TestCases\FromAssemblyNamedBasedOnGeneric.cs" />
+    <Compile Include="Windsor\TestCases\FromAssemblyNamedBasedOnNonGeneric.cs" />
+    <Compile Include="Windsor\TestCases\FromAssemblyNamedPick.cs" />
+    <Compile Include="Windsor\TestCases\FromAssemblyTypeOfPick.cs" />
+    <Compile Include="Windsor\TestCases\FromThisAssemblyBasedOnNonGeneric.cs" />
+    <Compile Include="Windsor\TestCases\FromThisAssemblyInNamespaceWithSubnamespacesFalse.cs" />
+    <Compile Include="Windsor\TestCases\FromThisAssemblyInSameNamespaceAsGenericWithSubnamespacesFalse.cs" />
+    <Compile Include="Windsor\TestCases\FromThisAssemblyInSameNamespaceAsNonGeneric.cs" />
+    <Compile Include="Windsor\TestCases\FromThisAssemblyInSameNamespaceAsNonGenericWithSubnamespacesFalse.cs" />
+    <Compile Include="Windsor\TestCases\FromThisAssemblyInSameNamespaceAsNonGenericWithSubnamespacesTrue.cs" />
+    <Compile Include="Windsor\TestCases\FromAssemblyGetExecutingAssemblyBasedOn.cs" />
+    <Compile Include="Windsor\TestCases\FromAssemblyTypeOfBasedOn.cs" />
+    <Compile Include="Windsor\TestCases\FromThisAssemblyInNamespace.cs" />
+    <Compile Include="Windsor\TestCases\FromThisAssemblyInNamespaceWithSubnamespacesTrue.cs" />
+    <Compile Include="Windsor\TestCases\FromThisAssemblyInSameNamespaceAsGeneric.cs" />
+    <Compile Include="Windsor\TestCases\FromThisAssemblyInSameNamespaceAsGenericWithSubnamespacesTrue.cs" />
+    <Compile Include="Windsor\TestCases\FromThisAssemblyPick.cs" />
+    <Compile Include="Windsor\TestCases\FromThisAssemblyWhereComponentHasAttributeMethodGroup.cs" />
+    <Compile Include="Windsor\TestCases\FromThisAssemblyWhereComponentIsInInamespace.cs" />
+    <Compile Include="Windsor\TestCases\FromThisAssemblyWhereComponentIsInInamespaceWithSubnamespacesFalse.cs" />
+    <Compile Include="Windsor\TestCases\FromThisAssemblyWhereComponentIsInInamespaceWithSubnamespacesTrue.cs" />
+    <Compile Include="Windsor\TestCases\FromThisAssemblyWhereComponentIsInSameInamespaceAsGeneric.cs" />
+    <Compile Include="Windsor\TestCases\FromThisAssemblyWhereComponentIsInSameInamespaceAsGenericWithSubnamespacesFalse.cs" />
+    <Compile Include="Windsor\TestCases\FromThisAssemblyWhereComponentIsInSameInamespaceAsGenericWithSubnamespacesTrue.cs" />
+    <Compile Include="Windsor\TestCases\FromThisAssemblyWhereComponentIsInSameInamespaceAsNonGeneric.cs" />
+    <Compile Include="Windsor\TestCases\FromThisAssemblyWhereComponentIsInSameInamespaceAsNonGenericWithSubnamespacesFalse.cs" />
+    <Compile Include="Windsor\TestCases\FromThisAssemblyWhereComponentIsInSameInamespaceAsNonGenericWithSubnamespacesTrue.cs" />
+    <Compile Include="Windsor\TestCases\FromTypesNewArrayBasedOnGeneric.cs" />
+    <Compile Include="Windsor\TestCases\FromTypesNewArrayPick.cs" />
+    <Compile Include="Windsor\TestCases\FromTypesNewListBasedOnGeneric.cs" />
+    <Compile Include="Windsor\TestCases\FromTypesNewListPick.cs" />
+    <Compile Include="Windsor\TestCases\FromTypesParamsBasedOnGeneric.cs" />
+    <Compile Include="Windsor\TestCases\FromTypesParamsPick.cs" />
+    <Compile Include="Windsor\TestCases\FromAssemblyGetExecutingAssembly.cs" />
+    <Compile Include="Windsor\TestCases\FromThisAssembly.cs" />
+    <Compile Include="Windsor\TestCases\FromAssemblyTypeOf.cs" />
+    <Compile Include="Windsor\ComponentTestCases\ComponentFor.cs" />
+    <Compile Include="Windsor\ComponentTestCases\ComponentForGenericImplementedByNonGeneric.cs" />
+    <Compile Include="Windsor\ComponentTestCases\ComponentForImplementedBy.cs" />
+    <Compile Include="Windsor\ComponentTestCases\ComponentForImplementedByNonGeneric.cs" />
+    <Compile Include="Windsor\ComponentTestCases\ComponentForImplementedByNonGenericWithAdditionalParams.cs" />
+    <Compile Include="Windsor\ComponentTestCases\ComponentForImplementedByWithAdditionalParams.cs" />
+    <Compile Include="Windsor\ComponentTestCases\ComponentForNonGeneric.cs" />
+    <Compile Include="Windsor\ComponentTestCases\ComponentForNonGenericImplementedByGeneric.cs" />
+    <Compile Include="Windsor\TestCases\FromThisAssemblyBasedOnGeneric.cs" />
+    <Compile Include="Windsor\TestCases\FromTypesNewArray.cs" />
+    <Compile Include="Windsor\TestCases\FromTypesNewList.cs" />
+    <Compile Include="Windsor\TestCases\FromTypesParams.cs" />
+    <Compile Include="Windsor\ComponentTestCases\GenericOpenType.cs" />
+    <None Include="Windsor\_DoesNotCompile-BrokenReference.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
