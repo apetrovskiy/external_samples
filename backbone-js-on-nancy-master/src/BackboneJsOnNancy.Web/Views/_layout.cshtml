@@ -1,0 +1,50 @@
+﻿@{
+    Bundles.Reference("assets/stylesheets/style.less");
+    Bundles.Reference("assets/javascripts/header");
+    Bundles.Reference("assets/javascripts/libs");
+    Bundles.Reference("assets/templates");
+    Bundles.Reference("assets/javascripts/app");
+}
+<!doctype html>
+<head lang="en">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @Bundles.RenderStylesheets()
+    @Bundles.RenderScripts("header")
+    @RenderSection("header", required: false)
+</head>
+<body>
+    <header id="header" class="navbar nvarbar-fixed-top" role="header">
+        <div class="navbar-inner">
+            <div class="container">
+                
+                <a class="brand" href="@Url.Content("~/")">
+                    Backbone JS on Nancy
+                </a>
+                
+                @Html.Partial("_loginStatusPartial")
+
+            </div>
+        </div>
+    </header>
+    
+    <div class="container" role="main">
+        <div class="row">
+            <div class="span12">
+                @RenderBody()
+            </div>
+        </div>
+        
+        <footer class="footer" role="footer">
+            <p>Powered by 
+                <a href="http://documentcloud.github.com/backbone/" target="_blank" title="Backbone.js">Backbone</a>, 
+                <a href="http://nancyfx.org" target="_blank" title="Nancy - Lightweight Web Framework for .net">Nancy</a> and
+                <a href="http://getcassette.net/" target="_blank" title="Asset bundling for .NET web apps">Cassette</a>.
+            </p>
+        </footer>
+    </div>
+    
+  
+    @RenderSection("footer", required: false)
+
+</body>
