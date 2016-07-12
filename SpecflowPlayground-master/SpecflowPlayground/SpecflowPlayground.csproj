@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D82747F4-28D9-4551-8453-1DB2B61B0014}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SpecflowPlayground</RootNamespace>
+    <AssemblyName>SpecflowPlayground</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.4.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.4.1\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TechTalk.SpecFlow, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecFlow.2.1.0\lib\net45\TechTalk.SpecFlow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeThisNotThat\Address.cs" />
+    <Compile Include="CodeThisNotThat\Customer.cs" />
+    <Compile Include="CodeThisNotThat\OrdinalParameters.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdinalParameters.feature</DependentUpon>
+    </Compile>
+    <Compile Include="CodeThisNotThat\OrdinalParametersSteps.cs">
+      <DependentUpon>OrdinalParameters.feature</DependentUpon>
+    </Compile>
+    <Compile Include="CodeThisNotThat\ParsingTableFieldsSteps.cs">
+      <DependentUpon>ParsingTableFields.feature</DependentUpon>
+    </Compile>
+    <Compile Include="CodeThisNotThat\ParsingTableFields.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ParsingTableFields.feature</DependentUpon>
+    </Compile>
+    <Compile Include="CodeThisNotThat\ReferenceExistingEntities.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReferenceExistingEntities.feature</DependentUpon>
+    </Compile>
+    <Compile Include="CodeThisNotThat\ReferenceExistingEntitiesSteps.cs">
+      <DependentUpon>ReferenceExistingEntities.feature</DependentUpon>
+    </Compile>
+    <Compile Include="CodeThisNotThat\ServiceProxy.cs" />
+    <Compile Include="CodeThisNotThat\SharingStateBetweenBindings.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SharingStateBetweenBindings.feature</DependentUpon>
+    </Compile>
+    <Compile Include="CodeThisNotThat\SharingStateBetweenBindingsSteps.cs">
+      <DependentUpon>SharingStateBetweenBindings.feature</DependentUpon>
+    </Compile>
+    <Compile Include="CodeThisNotThat\StepArgumentTransform.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StepArgumentTransform.feature</DependentUpon>
+    </Compile>
+    <Compile Include="CodeThisNotThat\StepArgumentTransformSteps.cs" />
+    <Compile Include="CodeThisNotThat\TableManipulation.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TableManipulation.feature</DependentUpon>
+    </Compile>
+    <Compile Include="CodeThisNotThat\TableManipulationSteps.cs">
+      <DependentUpon>TableManipulation.feature</DependentUpon>
+    </Compile>
+    <Compile Include="RegexSamples\RegexSamples.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegexSamples.feature</DependentUpon>
+    </Compile>
+    <Compile Include="RegexSamples\RegexSamplesSteps.cs">
+      <DependentUpon>RegexSamples.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SharingState\CalculatorService.cs" />
+    <Compile Include="SharingState\ContextObject.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContextObject.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SharingState\ContextObjectSteps.cs">
+      <DependentUpon>ContextObject.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SharingState\DomainObject.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DomainObject.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SharingState\DomainObjectSteps.cs">
+      <DependentUpon>DomainObject.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SharingState\PrivateMembers.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrivateMembers.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SharingState\PrivateMembersSteps.cs">
+      <DependentUpon>PrivateMembers.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SharingState\ScenarioContext.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScenarioContext.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SharingState\ScenarioContextSteps.cs">
+      <DependentUpon>ScenarioContext.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Tags\ScopedBinding.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScopedBinding.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Tags\ScopedBindingSteps.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CodeThisNotThat\OrdinalParameters.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>OrdinalParameters.feature.cs</LastGenOutput>
+    </None>
+    <None Include="CodeThisNotThat\ParsingTableFields.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ParsingTableFields.feature.cs</LastGenOutput>
+    </None>
+    <None Include="CodeThisNotThat\ReferenceExistingEntities.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ReferenceExistingEntities.feature.cs</LastGenOutput>
+    </None>
+    <None Include="CodeThisNotThat\SharingStateBetweenBindings.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SharingStateBetweenBindings.feature.cs</LastGenOutput>
+    </None>
+    <None Include="CodeThisNotThat\StepArgumentTransform.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>StepArgumentTransform.feature.cs</LastGenOutput>
+    </None>
+    <None Include="CodeThisNotThat\TableManipulation.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>TableManipulation.feature.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="RegexSamples\RegexSamples.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>RegexSamples.feature.cs</LastGenOutput>
+    </None>
+    <None Include="SharingState\ContextObject.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ContextObject.feature.cs</LastGenOutput>
+    </None>
+    <None Include="SharingState\DomainObject.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DomainObject.feature.cs</LastGenOutput>
+    </None>
+    <None Include="SharingState\PrivateMembers.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PrivateMembers.feature.cs</LastGenOutput>
+    </None>
+    <None Include="SharingState\ScenarioContext.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ScenarioContext.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Tags\ScopedBinding.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ScopedBinding.feature.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
