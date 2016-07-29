@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <title>My AngularJS App</title>
+    <link rel="stylesheet" href="css/app.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-inner">
+            <a class="brand" href="#">Angular Banking</a>
+            <ul class="nav">
+                <li><a href="#/balances">Balances</a></li>
+                <li><a href="#/transfers">Transfers</a></li>
+                <li ng-controller="LoginController"><a href="#" ng-click="logOff($event)">Log Off</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div ng-view class="container"></div>
+
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="LoginController">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Validate Account Information</h3>
+        </div>
+        <div class="modal-body">
+            <input type="text" placeholder="Username" ng-model="userName"/><br/>
+            <input type="password" placeholder="Password" ng-model="password"/><br/>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="login($event)">Login</button>
+        </div>
+    </div>
+    <!-- In production use:
+            <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+            -->
+    <script src="Scripts/jquery-1.8.3.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular-resource.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+</body>
+</html>
