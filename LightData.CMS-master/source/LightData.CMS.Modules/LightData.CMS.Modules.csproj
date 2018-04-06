@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+    <AssemblyName>LightData.CMS.Modules</AssemblyName>
+    <RootNamespace>LightData.CMS.Modules</RootNamespace>
+    <PackageId>LightData.CMS.Modules</PackageId>
+    <Authors>LightData.CMS.Modules</Authors>
+    <Company>LightData.CMS.Modules</Company>
+    <Product>LightData.CMS.Modules</Product>
+    <Platforms>AnyCPU;x86;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Configuration">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Configuration.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="EntityWorker.Core" Version="1.5.8" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+</Project>

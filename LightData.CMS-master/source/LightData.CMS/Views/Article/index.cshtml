@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "index";
+    Layout = "~/Views/_SharedLayout.cshtml";
+}
+<nav class="articles"></nav>
+<script>
+    $(".articles").articles({
+        getUri: '@Url.Action("Get", "Article")',
+        header: "Manage Articles",
+        autoFillDataUrl: '@Url.Action("Get", "Article")',
+        saveUri: '@Url.Action("Save", "Article")',
+        deleteUri: '@Url.Action("Delete", "Article")',
+        autoFillMenusDataUrl: '@Url.Action("GetAutoFillData", "Menus")',
+        themeUrl: '@System.Configuration.ConfigurationManager.AppSettings["ThemeUrl"]',
+        getImageUri: '@Url.Action("Get", "FileUploader")',
+        saveImageUri: '@Url.Action("Save", "FileUploader")',
+        deleteImageUri: '@Url.Action("Delete", "FileUploader")',
+        folderGetUri: '@Url.Action("GetFolders", "FileUploader")',
+        folderSaveUri: '@Url.Action("SaveFolder", "FileUploader")',
+        folderDeleteUri: '@Url.Action("DeleteFolder", "FileUploader")',
+        getImageFullUri: '@Url.Action("GetImage", "FileUploader",new { }, this.Request.Url.Scheme)',
+        saveFileItemUri: '@Url.Action("SaveFileItem", "FileUploader")',
+        getFoldersAutoFill: '@Url.Action("GetFoldersAutoFill", "FileUploader")'
+    });
+</script>
+

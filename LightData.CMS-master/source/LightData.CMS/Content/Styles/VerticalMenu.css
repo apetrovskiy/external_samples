@@ -1,0 +1,99 @@
+﻿.tableTree, .tableTree ul, .tableTree li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tableTree {
+    background: url('data:image/gif;base64,R0lGODlhLAAEAIAAAO7u7v///yH5BAAAAAAALAAAAAAsAAQAAAIPjI8Bye3vFpz0yYrxzbgAADs=') repeat-y;
+    overflow: hidden;
+}
+
+    .tableTree li a.selected {
+        text-decoration: underline;
+        text-decoration-color: #CCC;
+    }
+
+    .tableTree li {
+        line-height: 20px;
+        margin-top: 1px;
+        position: relative;
+        width: 100%;
+    }
+    /* IE leaves a blank space where span is added so this is to avoid that */
+    * html .tableTree li {
+        float: left;
+        display: inline;
+    }
+
+        .tableTree li a {
+            padding-left: 28px;
+            text-decoration: none;
+            color: #057fac;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        .tableTree li span {
+            float: left;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 13px;
+            height: 13px;
+            cursor: auto;
+            font-size: 0;
+        }
+
+li span.collapsed {
+    background: url('data:image/gif;base64,R0lGODlhDQANAJEAAFVVVefn5////wAAACH5BAAAAAAALAAAAAANAA0AAAIgjI8oyy3mIoxtMuDswjVcAHKP14iLJpgj1bEMKiWyUQAAOw==') no-repeat 0 0;
+    cursor: pointer;
+    float: left;
+
+}
+
+li span.expanded {
+    background: url('data:image/gif;base64,R0lGODlhDQANAJEAAFVVVefn5////wAAACH5BAAAAAAALAAAAAANAA0AAAIbjI8oyy3mIoxt0mWvBZyzTIFScH1k+Zxlwh4FADs=') no-repeat 0 0;
+    cursor: pointer;
+    float: left;
+    position: absolute;
+}
+
+/* sub levels */
+
+.tableTree li ul {
+    margin-left: 28px;
+    background: url('data:image/gif;base64,R0lGODlhLAAEAIAAAO7u7v///yH5BAAAAAAALAAAAAAsAAQAAAIPjI8Bye3vFpz0yYrxzbgAADs=') repeat-y;
+}
+
+.tableTree li li {
+    background: url('data:image/gif;base64,R0lGODlhLAAUAIAAAO7u7v///yH5BAAAAAAALAAAAAAsABQAAAIyjI8Bye3vFpz0yYrxzdz2H4Eiso1faXJoqrEgAMfy6ip1R9+h3vJV7iMFKcChzegJFgAAOw==') no-repeat 0 0;
+}
+
+/* etc. */
+
+/* float fix */
+
+.tableTree:after, .tableTree ul:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.tableTree, .tableTree ul {
+    display: block;
+}
+    /*  \*/
+    .tableTree, .tableTree ul {
+        min-height: 1%;
+    }
+
+        * html .tableTree, * html .tableTree ul {
+            height: 1%;
+        }
+            /*  */
+            .tableTree ul {
+                display: none;
+            }

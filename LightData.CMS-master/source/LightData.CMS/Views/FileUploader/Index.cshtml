@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Manage Files";
+    Layout = "~/Views/_SharedLayout.cshtml";
+}
+
+<div class="file"></div>
+
+<script>
+    $(".file").files({
+        view: "",
+        getUri: '@Url.Action("Get", "FileUploader")',
+        saveUri: '@Url.Action("Save", "FileUploader")',
+        deleteUri: '@Url.Action("Delete", "FileUploader")',
+        folderGetUri: '@Url.Action("GetFolders", "FileUploader")',
+        folderSaveUri: '@Url.Action("SaveFolder", "FileUploader")',
+        folderDeleteUri: '@Url.Action("DeleteFolder", "FileUploader")',
+        getImageUri: '@Url.Action("GetImage", "FileUploader",new { }, this.Request.Url.Scheme)',
+        saveFileItemUri: '@Url.Action("SaveFileItem", "FileUploader")',
+        allowedFiles: ["JAVASCRIPT", "CSS"],
+        onInsert: function (img) {
+
+        }
+    });
+</script>
+
+

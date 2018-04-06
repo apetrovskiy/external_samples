@@ -1,0 +1,187 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script>
+        var globalSettings =
+        {
+            setValue: '@Url.Action("SetValue", "Menus")',
+            getValue: '@Url.Action("GetValue", "Menus")',
+            htmlFormater: '@Url.Action("HtmlFormater", "Menus", new { }, this.Request.Url.Scheme)',
+        };
+    </script>
+    @Styles.Render("~/bundles/css")
+    @Scripts.Render("~/bundles/jquery")
+
+    <script>
+        globalSettings.theme = $.themeLoader({ getUri: '@Url.Action("GetTheme", "FileUploader", new { }, this.Request.Url.Scheme)' });
+    </script>
+
+    @*@foreach (var file in new LightData.CMS.Modules.Repository.Repository().Get<LightData.CMS.Modules.Library.FileItem>().Where(x =>
+         x.FileType == LightData.CMS.Modules.Helper.EnumHelper.AllowedFiles.CSS || x.FileType == LightData.CMS.Modules.Helper.EnumHelper.AllowedFiles.JAVASCRIPT).Execute())
+        {
+            if (file.FileType.ToString() == "JAVASCRIPT")
+            {
+                <script type="text/javascript" src='@Url.Action("LoadFiles", "FileUploader", new { }, this.Request.Url.Scheme)?fileId=@file.Id'></script>
+            }
+            else
+            {
+                <link class="ExternalCss" href='@Url.Action("LoadFiles", "FileUploader", new { }, this.Request.Url.Scheme)?fileId=@file.Id' rel="stylesheet" />
+            }
+        }*@
+
+    <title>@ViewBag.Title</title>
+
+</head>
+<body>
+    <div id="siteContainer">
+        <div id="cssmenu">
+        </div>
+        <div id="containerRight">
+            <nav class="menus"></nav>
+
+        </div>
+        <div id="centerContent">
+            @RenderBody()
+        </div>
+
+
+    </div>
+    <script>
+
+        var base = {
+            getActiveCountries: function () {
+                var result = [];
+                $("body").LightDataAjax({
+                    contentType: "application/json",
+                    dataType: "json",
+                    type: "POST",
+                    async: false,
+                    url: '@Url.Action("GetActiveCountries", "Article")',
+                    success: function (data) {
+                        result = data;
+                        return true;
+                    }
+                });
+                return result;
+            },
+
+            saveCountry: function (country) {
+                  $("body").LightDataAjax({
+                    contentType: "application/json",
+                    dataType: "json",
+                    type: "POST",
+                    async: false,
+                    data: JSON.stringify(country),
+                    url: '@Url.Action("SaveCountry", "Article")',
+                    success: function (data) {
+                        result = data;
+                        return true;
+                    }
+                });
+            },
+            getCountries: function (filter) {
+                var result = [];
+                $("body").LightDataAjax({
+                    contentType: "application/json",
+                    dataType: "json",
+                    type: "POST",
+                    async: false,
+                    data: { filter: filter},
+                    url: '@Url.Action("GetCountries", "Article")',
+                    success: function (data) {
+                        result = data;
+                        return true;
+                    }
+                });
+                return result;
+            }
+
+        }
+
+
+        $(document).ready(function () {
+            $.toolTipIni();
+            $.checkBox();
+            $.inputValidator();
+            var timeOut = undefined;
+            function floatFix() {
+                $("#containerRight").css({ "min-height": $(window).height() - 50 });
+                var rightMenu = $("#containerRight")[0].getBoundingClientRect().width + 25;
+                var centerMenu = $("#centerContent");
+                var windowWidth = $(window).width()
+                centerMenu.css("max-width", (windowWidth - rightMenu));
+
+
+
+                if (timeOut === undefined)
+                $(window).resize(function () {
+                    clearTimeout(timeOut);
+
+                    timeOut = setTimeout(floatFix, 70);
+                });
+            }
+
+            floatFix();
+            $("#cssmenu").horizontalMenu({
+                datasource: [
+                    {
+                        id: 1,
+                        uri: "/CMS/Article/index",
+                        displayName: "Manage Articles",
+                        children: [
+                            {
+                                id: 2,
+                                uri: "#",
+                                displayName: "Overview",
+                                children: [
+                                    {
+                                        id: 3,
+                                        uri: "#",
+                                        displayName: "Overview 2"
+                                    },
+                                    {
+                                        id: 4,
+                                        uri: "#",
+                                        displayName: "Overview 3"
+                                    }
+                                ]
+
+                            }
+                        ]
+                    },
+                    {
+                        id: 1,
+                        uri: "/CMS/fileuploader",
+                        displayName: "Manage Theme Files",
+                        children: [{
+                            id: 5,
+                            uri: "/CMS/Slider/index",
+                            displayName: "Manage Slider"
+                        }]
+                    },
+                    {
+                        id: 1,
+                        uri: "#",
+                        displayName: "Create Menussdsd"
+                    }
+                ]
+            });
+        });
+    </script>
+
+    <script>
+    $(".menus").menus({
+        getUri: '@Url.Action("GetMenus", "Menus")',
+        header: "Manage Menus",
+        autoFillDataUrl: '@Url.Action("GetAutoFillData", "Menus")',
+        saveUri: '@Url.Action("Save", "Menus")',
+        deleteUri: '@Url.Action("Delete", "Menus")'
+    });
+    </script>
+
+</body>
+
+</html>

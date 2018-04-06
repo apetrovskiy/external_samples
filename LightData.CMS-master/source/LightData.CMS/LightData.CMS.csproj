@@ -1,0 +1,614 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\solution\packages\Microsoft.Net.Compilers.2.7.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\..\solution\packages\Microsoft.Net.Compilers.2.7.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="..\..\solution\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\..\solution\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DAC723CE-F225-4007-8DDC-C7138C7D8278}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LightData.CMS</RootNamespace>
+    <AssemblyName>LightData.CMS</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\..\solution\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="dotless.Core, Version=1.5.2.0, Culture=neutral, PublicKeyToken=96b446c9e63eae34, processorArchitecture=MSIL">
+      <HintPath>..\..\solution\packages\dotless.1.5.2\lib\dotless.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityWorker.Core, Version=1.0.5.8, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\solution\packages\EntityWorker.Core.1.5.8\lib\net451\EntityWorker.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityWorker.SQLite, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\solution\packages\EntityWorker.SQLite.1.0.1\lib\net461\EntityWorker.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="FastDeepCloner, Version=1.0.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\solution\packages\FastDeepCloner.1.1.1\lib\net451\FastDeepCloner.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\solution\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\solution\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\solution\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.CodeDom, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\solution\packages\System.CodeDom.4.4.0\lib\net461\System.CodeDom.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlClient, Version=4.2.0.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\solution\packages\System.Data.SqlClient.4.4.3\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite, Version=1.0.108.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\..\solution\packages\System.Data.SQLite.Core.1.0.108.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\solution\packages\Microsoft.AspNet.WebApi.Client.5.2.4\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\solution\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\solution\packages\Microsoft.AspNet.WebApi.Core.5.2.4\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\solution\packages\Microsoft.AspNet.WebApi.WebHost.5.2.4\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\solution\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\solution\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\solution\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\solution\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\solution\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\solution\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\solution\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\..\solution\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\HtmlEditorScript\jHtmlArea-0.8.js" />
+    <Content Include="Content\HtmlEditorScript\jquery-ui-1.7.2.custom.js" />
+    <Content Include="Content\HtmlEditorStyle\jHtmlArea.css" />
+    <Content Include="Content\HtmlEditorStyle\jHtmlArea.Editor.css" />
+    <Content Include="Content\HtmlEditorStyle\jHtmlArea.png" />
+    <Content Include="Content\HtmlEditorStyle\jHtmlArea_Toolbar_Group_BG.png" />
+    <Content Include="Content\HtmlEditorStyle\jHtmlArea_Toolbar_Group__Btn_Select_BG.png" />
+    <Content Include="Content\HtmlEditorStyle\jqueryui\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Content\HtmlEditorStyle\jqueryui\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Content\HtmlEditorStyle\jqueryui\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Content\HtmlEditorStyle\jqueryui\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Content\HtmlEditorStyle\jqueryui\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Content\HtmlEditorStyle\jqueryui\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\HtmlEditorStyle\jqueryui\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Content\HtmlEditorStyle\jqueryui\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Content\HtmlEditorStyle\jqueryui\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Content\HtmlEditorStyle\jqueryui\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\HtmlEditorStyle\jqueryui\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Content\HtmlEditorStyle\jqueryui\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Content\HtmlEditorStyle\jqueryui\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Content\HtmlEditorStyle\jqueryui\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\HtmlEditorStyle\jqueryui\ui-lightness\jquery-ui-1.7.2.custom.css" />
+    <Content Include="Content\images\blank.gif" />
+    <Content Include="Content\images\colorpicker_background.png" />
+    <Content Include="Content\images\colorpicker_hex.png" />
+    <Content Include="Content\images\colorpicker_hsb_b.png" />
+    <Content Include="Content\images\colorpicker_hsb_h.png" />
+    <Content Include="Content\images\colorpicker_hsb_s.png" />
+    <Content Include="Content\images\colorpicker_indic.gif" />
+    <Content Include="Content\images\colorpicker_overlay.png" />
+    <Content Include="Content\images\colorpicker_rgb_b.png" />
+    <Content Include="Content\images\colorpicker_rgb_g.png" />
+    <Content Include="Content\images\colorpicker_rgb_r.png" />
+    <Content Include="Content\images\colorpicker_select.gif" />
+    <Content Include="Content\images\colorpicker_submit.png" />
+    <Content Include="Content\images\custom_background.png" />
+    <Content Include="Content\images\custom_hex.png" />
+    <Content Include="Content\images\custom_hsb_b.png" />
+    <Content Include="Content\images\custom_hsb_h.png" />
+    <Content Include="Content\images\custom_hsb_s.png" />
+    <Content Include="Content\images\custom_indic.gif" />
+    <Content Include="Content\images\custom_rgb_b.png" />
+    <Content Include="Content\images\custom_rgb_g.png" />
+    <Content Include="Content\images\custom_rgb_r.png" />
+    <Content Include="Content\images\custom_submit.png" />
+    <Content Include="Content\images\disk.png" />
+    <Content Include="Content\images\select.png" />
+    <Content Include="Content\images\select2.png" />
+    <Content Include="Content\images\slider.png" />
+    <Content Include="Content\Script\Articles.js" />
+    <Content Include="Content\Script\CheckBox.js" />
+    <Content Include="Content\Script\colorpicker.js" />
+    <Content Include="Content\Script\ContextMenu.js" />
+    <Content Include="Content\Script\Dialog.js" />
+    <Content Include="Content\Script\fancyDatePicker.js" />
+    <Content Include="Content\Script\FileUploader.js" />
+    <Content Include="Content\Script\globalization\af-ZA.js" />
+    <Content Include="Content\Script\globalization\ar-AE.js" />
+    <Content Include="Content\Script\globalization\ar-BH.js" />
+    <Content Include="Content\Script\globalization\ar-DJ.js" />
+    <Content Include="Content\Script\globalization\ar-DZ.js" />
+    <Content Include="Content\Script\globalization\ar-EG.js" />
+    <Content Include="Content\Script\globalization\ar-IQ.js" />
+    <Content Include="Content\Script\globalization\ar-JO.js" />
+    <Content Include="Content\Script\globalization\ar-KM.js" />
+    <Content Include="Content\Script\globalization\ar-KW.js" />
+    <Content Include="Content\Script\globalization\ar-LB.js" />
+    <Content Include="Content\Script\globalization\ar-LY.js" />
+    <Content Include="Content\Script\globalization\ar-MA.js" />
+    <Content Include="Content\Script\globalization\ar-MR.js" />
+    <Content Include="Content\Script\globalization\ar-OM.js" />
+    <Content Include="Content\Script\globalization\ar-PS.js" />
+    <Content Include="Content\Script\globalization\ar-QA.js" />
+    <Content Include="Content\Script\globalization\ar-SA.js" />
+    <Content Include="Content\Script\globalization\ar-SD.js" />
+    <Content Include="Content\Script\globalization\ar-SO.js" />
+    <Content Include="Content\Script\globalization\ar-SY.js" />
+    <Content Include="Content\Script\globalization\ar-TN.js" />
+    <Content Include="Content\Script\globalization\ar-YE.js" />
+    <Content Include="Content\Script\globalization\az-Cyrl-AZ.js" />
+    <Content Include="Content\Script\globalization\az-Latn-AZ.js" />
+    <Content Include="Content\Script\globalization\be-BY.js" />
+    <Content Include="Content\Script\globalization\bg-BG.js" />
+    <Content Include="Content\Script\globalization\bs-Latn-BA.js" />
+    <Content Include="Content\Script\globalization\ca-ES.js" />
+    <Content Include="Content\Script\globalization\cs-CZ.js" />
+    <Content Include="Content\Script\globalization\cy-GB.js" />
+    <Content Include="Content\Script\globalization\da-DK.js" />
+    <Content Include="Content\Script\globalization\de-AT.js" />
+    <Content Include="Content\Script\globalization\de-CH.js" />
+    <Content Include="Content\Script\globalization\de-DE.js" />
+    <Content Include="Content\Script\globalization\de-LI.js" />
+    <Content Include="Content\Script\globalization\de-LU.js" />
+    <Content Include="Content\Script\globalization\dv-MV.js" />
+    <Content Include="Content\Script\globalization\el-GR.js" />
+    <Content Include="Content\Script\globalization\en-029.js" />
+    <Content Include="Content\Script\globalization\en-AU.js" />
+    <Content Include="Content\Script\globalization\en-BZ.js" />
+    <Content Include="Content\Script\globalization\en-CA.js" />
+    <Content Include="Content\Script\globalization\en-GB.js" />
+    <Content Include="Content\Script\globalization\en-IE.js" />
+    <Content Include="Content\Script\globalization\en-JM.js" />
+    <Content Include="Content\Script\globalization\en-NZ.js" />
+    <Content Include="Content\Script\globalization\en-PH.js" />
+    <Content Include="Content\Script\globalization\en-TT.js" />
+    <Content Include="Content\Script\globalization\en-US.js" />
+    <Content Include="Content\Script\globalization\en-ZA.js" />
+    <Content Include="Content\Script\globalization\en-ZW.js" />
+    <Content Include="Content\Script\globalization\es-AR.js" />
+    <Content Include="Content\Script\globalization\es-BO.js" />
+    <Content Include="Content\Script\globalization\es-CL.js" />
+    <Content Include="Content\Script\globalization\es-CO.js" />
+    <Content Include="Content\Script\globalization\es-CR.js" />
+    <Content Include="Content\Script\globalization\es-DO.js" />
+    <Content Include="Content\Script\globalization\es-EC.js" />
+    <Content Include="Content\Script\globalization\es-ES.js" />
+    <Content Include="Content\Script\globalization\es-GT.js" />
+    <Content Include="Content\Script\globalization\es-HN.js" />
+    <Content Include="Content\Script\globalization\es-MX.js" />
+    <Content Include="Content\Script\globalization\es-NI.js" />
+    <Content Include="Content\Script\globalization\es-PA.js" />
+    <Content Include="Content\Script\globalization\es-PE.js" />
+    <Content Include="Content\Script\globalization\es-PR.js" />
+    <Content Include="Content\Script\globalization\es-PY.js" />
+    <Content Include="Content\Script\globalization\es-SV.js" />
+    <Content Include="Content\Script\globalization\es-UY.js" />
+    <Content Include="Content\Script\globalization\es-VE.js" />
+    <Content Include="Content\Script\globalization\et-EE.js" />
+    <Content Include="Content\Script\globalization\eu-ES.js" />
+    <Content Include="Content\Script\globalization\fa-IR.js" />
+    <Content Include="Content\Script\globalization\fi-FI.js" />
+    <Content Include="Content\Script\globalization\fo-FO.js" />
+    <Content Include="Content\Script\globalization\fr-BE.js" />
+    <Content Include="Content\Script\globalization\fr-CA.js" />
+    <Content Include="Content\Script\globalization\fr-CH.js" />
+    <Content Include="Content\Script\globalization\fr-FR.js" />
+    <Content Include="Content\Script\globalization\fr-LU.js" />
+    <Content Include="Content\Script\globalization\fr-MC.js" />
+    <Content Include="Content\Script\globalization\gl-ES.js" />
+    <Content Include="Content\Script\globalization\gu-IN.js" />
+    <Content Include="Content\Script\globalization\he-IL.js" />
+    <Content Include="Content\Script\globalization\hi-IN.js" />
+    <Content Include="Content\Script\globalization\hr-BA.js" />
+    <Content Include="Content\Script\globalization\hr-HR.js" />
+    <Content Include="Content\Script\globalization\hu-HU.js" />
+    <Content Include="Content\Script\globalization\hy-AM.js" />
+    <Content Include="Content\Script\globalization\id-ID.js" />
+    <Content Include="Content\Script\globalization\is-IS.js" />
+    <Content Include="Content\Script\globalization\it-CH.js" />
+    <Content Include="Content\Script\globalization\it-IT.js" />
+    <Content Include="Content\Script\globalization\ja-JP.js" />
+    <Content Include="Content\Script\globalization\ka-GE.js" />
+    <Content Include="Content\Script\globalization\kab-DZ.js" />
+    <Content Include="Content\Script\globalization\kk-KZ.js" />
+    <Content Include="Content\Script\globalization\kn-IN.js" />
+    <Content Include="Content\Script\globalization\ko-KR.js" />
+    <Content Include="Content\Script\globalization\kok-IN.js" />
+    <Content Include="Content\Script\globalization\ky-KG.js" />
+    <Content Include="Content\Script\globalization\lt-LT.js" />
+    <Content Include="Content\Script\globalization\lv-LV.js" />
+    <Content Include="Content\Script\globalization\mi-NZ.js" />
+    <Content Include="Content\Script\globalization\mk-MK.js" />
+    <Content Include="Content\Script\globalization\mn-MN.js" />
+    <Content Include="Content\Script\globalization\mr-IN.js" />
+    <Content Include="Content\Script\globalization\ms-BN.js" />
+    <Content Include="Content\Script\globalization\ms-MY.js" />
+    <Content Include="Content\Script\globalization\mt-MT.js" />
+    <Content Include="Content\Script\globalization\nb-NO.js" />
+    <Content Include="Content\Script\globalization\nl-BE.js" />
+    <Content Include="Content\Script\globalization\nl-NL.js" />
+    <Content Include="Content\Script\globalization\nn-NO.js" />
+    <Content Include="Content\Script\globalization\ns-ZA.js" />
+    <Content Include="Content\Script\globalization\pa-IN.js" />
+    <Content Include="Content\Script\globalization\pl-PL.js" />
+    <Content Include="Content\Script\globalization\pt-BR.js" />
+    <Content Include="Content\Script\globalization\pt-PT.js" />
+    <Content Include="Content\Script\globalization\quz-BO.js" />
+    <Content Include="Content\Script\globalization\quz-EC.js" />
+    <Content Include="Content\Script\globalization\quz-PE.js" />
+    <Content Include="Content\Script\globalization\ro-RO.js" />
+    <Content Include="Content\Script\globalization\ru-RU.js" />
+    <Content Include="Content\Script\globalization\sa-IN.js" />
+    <Content Include="Content\Script\globalization\se-FI.js" />
+    <Content Include="Content\Script\globalization\se-NO.js" />
+    <Content Include="Content\Script\globalization\se-SE.js" />
+    <Content Include="Content\Script\globalization\sk-SK.js" />
+    <Content Include="Content\Script\globalization\sl-SI.js" />
+    <Content Include="Content\Script\globalization\sma-NO.js" />
+    <Content Include="Content\Script\globalization\sma-SE.js" />
+    <Content Include="Content\Script\globalization\smj-NO.js" />
+    <Content Include="Content\Script\globalization\smj-SE.js" />
+    <Content Include="Content\Script\globalization\smn-FI.js" />
+    <Content Include="Content\Script\globalization\sms-FI.js" />
+    <Content Include="Content\Script\globalization\sq-AL.js" />
+    <Content Include="Content\Script\globalization\sr-Cyrl-BA.js" />
+    <Content Include="Content\Script\globalization\sr-Cyrl-CS.js" />
+    <Content Include="Content\Script\globalization\sr-Latn-BA.js" />
+    <Content Include="Content\Script\globalization\sr-Latn-CS.js" />
+    <Content Include="Content\Script\globalization\sv-FI.js" />
+    <Content Include="Content\Script\globalization\sv-SE.js" />
+    <Content Include="Content\Script\globalization\sw-KE.js" />
+    <Content Include="Content\Script\globalization\syr-SY.js" />
+    <Content Include="Content\Script\globalization\ta-IN.js" />
+    <Content Include="Content\Script\globalization\te-IN.js" />
+    <Content Include="Content\Script\globalization\th-TH.js" />
+    <Content Include="Content\Script\globalization\tn-ZA.js" />
+    <Content Include="Content\Script\globalization\tr-TR.js" />
+    <Content Include="Content\Script\globalization\tt-RU.js" />
+    <Content Include="Content\Script\globalization\uk-UA.js" />
+    <Content Include="Content\Script\globalization\ur-PK.js" />
+    <Content Include="Content\Script\globalization\uz-Cyrl-UZ.js" />
+    <Content Include="Content\Script\globalization\uz-Latn-UZ.js" />
+    <Content Include="Content\Script\globalization\vi-VN.js" />
+    <Content Include="Content\Script\globalization\xh-ZA.js" />
+    <Content Include="Content\Script\globalization\zh-CN.js" />
+    <Content Include="Content\Script\globalization\zh-HK.js" />
+    <Content Include="Content\Script\globalization\zh-MO.js" />
+    <Content Include="Content\Script\globalization\zh-SG.js" />
+    <Content Include="Content\Script\globalization\zh-TW.js" />
+    <Content Include="Content\Script\globalization\zu-ZA.js" />
+    <Content Include="Content\Script\HorizontalMenu.js" />
+    <Content Include="Content\Script\InputValidator.js" />
+    <Content Include="Content\Script\JqAutoFill.js" />
+    <Content Include="Content\Script\jquery-3.2.1.min.js" />
+    <Content Include="Content\Script\jquery-te-1.4.0.js" />
+    <Content Include="Content\Script\jquery-ui.min.js" />
+    <Content Include="Content\Script\LightDataTableAjax.js" />
+    <Content Include="Content\Script\loader.js" />
+    <Content Include="Content\Script\Menus.js" />
+    <Content Include="Content\Script\Plugins.js" />
+    <Content Include="Content\Script\sliderManager.js" />
+    <Content Include="Content\Script\Tabs.js" />
+    <Content Include="Content\Script\Themes.js" />
+    <Content Include="Content\Script\ToolTip.js" />
+    <Content Include="Content\Script\VerticalMenu.js" />
+    <Content Include="Content\Styles\Articles.css" />
+    <Content Include="Content\Styles\CheckBox.css" />
+    <Content Include="Content\Styles\colorpicker.css" />
+    <Content Include="Content\Styles\Dialog.css" />
+    <Content Include="Content\Styles\Errors.css" />
+    <Content Include="Content\Styles\fancyDatePicker.css" />
+    <Content Include="Content\Styles\FileUploader.css" />
+    <Content Include="Content\Styles\images\jquery-te.png" />
+    <Content Include="Content\Styles\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\Styles\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\Styles\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\Styles\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\Styles\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\Styles\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\Styles\JqAutoFill.css" />
+    <Content Include="Content\Styles\jquery-te-1.4.0.css" />
+    <Content Include="Content\Styles\jquery-ui.theme.css" />
+    <Content Include="Content\Styles\CMSLayout.css" />
+    <Content Include="App_Data\LightDataTable.db" />
+    <Content Include="Content\Styles\HorizontalMenu.css" />
+    <Content Include="Content\Styles\LightDataTableLoader.css" />
+    <Content Include="Content\Styles\package.json" />
+    <Content Include="Content\Styles\reset.css" />
+    <Content Include="Content\Styles\sliderManager.css" />
+    <Content Include="Content\Styles\Tabs.css" />
+    <Content Include="Content\Styles\ToolTip.css" />
+    <Content Include="Content\Styles\VerticalMenu.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\codemirror-2.37\keymap\emacs.js" />
+    <Content Include="Scripts\codemirror-2.37\keymap\vim.js" />
+    <Content Include="Scripts\codemirror-2.37\lib\codemirror.css" />
+    <Content Include="Scripts\codemirror-2.37\lib\codemirror.js" />
+    <Content Include="Scripts\codemirror-2.37\lib\util\closetag.js" />
+    <Content Include="Scripts\codemirror-2.37\lib\util\continuecomment.js" />
+    <Content Include="Scripts\codemirror-2.37\lib\util\continuelist.js" />
+    <Content Include="Scripts\codemirror-2.37\lib\util\dialog.css" />
+    <Content Include="Scripts\codemirror-2.37\lib\util\dialog.js" />
+    <Content Include="Scripts\codemirror-2.37\lib\util\foldcode.js" />
+    <Content Include="Scripts\codemirror-2.37\lib\util\formatting.js" />
+    <Content Include="Scripts\codemirror-2.37\lib\util\javascript-hint.js" />
+    <Content Include="Scripts\codemirror-2.37\lib\util\loadmode.js" />
+    <Content Include="Scripts\codemirror-2.37\lib\util\match-highlighter.js" />
+    <Content Include="Scripts\codemirror-2.37\lib\util\multiplex.js" />
+    <Content Include="Scripts\codemirror-2.37\lib\util\overlay.js" />
+    <Content Include="Scripts\codemirror-2.37\lib\util\pig-hint.js" />
+    <Content Include="Scripts\codemirror-2.37\lib\util\runmode-standalone.js" />
+    <Content Include="Scripts\codemirror-2.37\lib\util\runmode.js" />
+    <Content Include="Scripts\codemirror-2.37\lib\util\search.js" />
+    <Content Include="Scripts\codemirror-2.37\lib\util\searchcursor.js" />
+    <Content Include="Scripts\codemirror-2.37\lib\util\simple-hint.css" />
+    <Content Include="Scripts\codemirror-2.37\lib\util\simple-hint.js" />
+    <Content Include="Scripts\codemirror-2.37\lib\util\xml-hint.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\clike\clike.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\clojure\clojure.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\coffeescript\coffeescript.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\commonlisp\commonlisp.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\css\css.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\css\test.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\diff\diff.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\ecl\ecl.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\erlang\erlang.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\gfm\gfm.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\gfm\test.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\go\go.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\groovy\groovy.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\haskell\haskell.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\haxe\haxe.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\htmlembedded\htmlembedded.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\htmlmixed\htmlmixed.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\http\http.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\javascript\javascript.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\jinja2\jinja2.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\less\less.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\lua\lua.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\markdown\markdown.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\markdown\test.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\mysql\mysql.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\ntriples\ntriples.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\ocaml\ocaml.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\pascal\pascal.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\perl\perl.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\php\php.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\pig\pig.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\plsql\plsql.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\properties\properties.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\python\LICENSE.txt" />
+    <Content Include="Scripts\codemirror-2.37\mode\python\python.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\rpm\changes\changes.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\rpm\spec\spec.css" />
+    <Content Include="Scripts\codemirror-2.37\mode\rpm\spec\spec.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\rst\rst.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\ruby\ruby.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\rust\rust.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\r\r.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\scheme\scheme.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\shell\shell.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\sieve\sieve.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\smalltalk\smalltalk.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\smarty\smarty.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\sparql\sparql.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\sql\sql.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\stex\stex.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\stex\test.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\tiddlywiki\tiddlywiki.css" />
+    <Content Include="Scripts\codemirror-2.37\mode\tiddlywiki\tiddlywiki.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\tiki\tiki.css" />
+    <Content Include="Scripts\codemirror-2.37\mode\tiki\tiki.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\vbscript\vbscript.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\vb\LICENSE.txt" />
+    <Content Include="Scripts\codemirror-2.37\mode\vb\vb.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\velocity\velocity.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\verilog\verilog.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\xml\xml.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\xquery\test\testBase.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\xquery\test\testEmptySequenceKeyword.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\xquery\test\testMultiAttr.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\xquery\test\testNamespaces.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\xquery\test\testProcessingInstructions.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\xquery\test\testQuotes.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\xquery\xquery.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\yaml\yaml.js" />
+    <Content Include="Scripts\codemirror-2.37\mode\z80\z80.js" />
+    <Content Include="Scripts\codemirror-2.37\theme\ambiance-mobile.css" />
+    <Content Include="Scripts\codemirror-2.37\theme\ambiance.css" />
+    <Content Include="Scripts\codemirror-2.37\theme\blackboard.css" />
+    <Content Include="Scripts\codemirror-2.37\theme\cobalt.css" />
+    <Content Include="Scripts\codemirror-2.37\theme\eclipse.css" />
+    <Content Include="Scripts\codemirror-2.37\theme\elegant.css" />
+    <Content Include="Scripts\codemirror-2.37\theme\erlang-dark.css" />
+    <Content Include="Scripts\codemirror-2.37\theme\lesser-dark.css" />
+    <Content Include="Scripts\codemirror-2.37\theme\monokai.css" />
+    <Content Include="Scripts\codemirror-2.37\theme\neat.css" />
+    <Content Include="Scripts\codemirror-2.37\theme\night.css" />
+    <Content Include="Scripts\codemirror-2.37\theme\rubyblue.css" />
+    <Content Include="Scripts\codemirror-2.37\theme\twilight.css" />
+    <Content Include="Scripts\codemirror-2.37\theme\vibrant-ink.css" />
+    <Content Include="Scripts\codemirror-2.37\theme\xq-dark.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ArticleController.cs" />
+    <Compile Include="Controllers\Base\BaseController.cs" />
+    <Compile Include="Controllers\FileUploaderController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MenusController.cs" />
+    <Compile Include="Controllers\SliderController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Styles\contextMenu.css" />
+    <None Include="packages.config" />
+    <Content Include="Views\_SharedLayout.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Home\index.cshtml" />
+    <Content Include="Views\Menus\index.cshtml" />
+    <Content Include="Views\Article\index.cshtml" />
+    <Content Include="Scripts\codemirror-2.37\package.json" />
+    <Content Include="Scripts\codemirror-2.37\mode\xquery\LICENSE" />
+    <Content Include="Scripts\codemirror-2.37\mode\sieve\LICENSE" />
+    <Content Include="Scripts\codemirror-2.37\mode\r\LICENSE" />
+    <Content Include="Scripts\codemirror-2.37\mode\ruby\LICENSE" />
+    <Content Include="Scripts\codemirror-2.37\mode\perl\LICENSE" />
+    <Content Include="Scripts\codemirror-2.37\mode\pascal\LICENSE" />
+    <Content Include="Scripts\codemirror-2.37\mode\coffeescript\LICENSE" />
+    <Content Include="Scripts\codemirror-2.37\LICENSE" />
+    <Content Include="Views\FileUploader\Index.cshtml" />
+    <Content Include="Views\Slider\index.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LightData.Auth\LightData.Auth.csproj">
+      <Project>{b6bc282d-4c06-4e48-9700-9ed17a82c7e4}</Project>
+      <Name>LightData.Auth</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LightData.CMS.Modules\LightData.CMS.Modules.csproj">
+      <Project>{3ddf3ef8-5aef-4204-8699-07719bcf0ec2}</Project>
+      <Name>LightData.CMS.Modules</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51969</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51969/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\solution\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\solution\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\..\solution\packages\EntityWorker.SQLite.1.0.1\build\net461\EntityWorker.SQLite.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\solution\packages\EntityWorker.SQLite.1.0.1\build\net461\EntityWorker.SQLite.targets'))" />
+    <Error Condition="!Exists('..\..\solution\packages\Microsoft.Net.Compilers.2.7.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\solution\packages\Microsoft.Net.Compilers.2.7.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\..\solution\packages\System.Data.SQLite.Core.1.0.108.0\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\solution\packages\System.Data.SQLite.Core.1.0.108.0\build\net46\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <Import Project="..\..\solution\packages\EntityWorker.SQLite.1.0.1\build\net461\EntityWorker.SQLite.targets" Condition="Exists('..\..\solution\packages\EntityWorker.SQLite.1.0.1\build\net461\EntityWorker.SQLite.targets')" />
+  <Import Project="..\..\solution\packages\System.Data.SQLite.Core.1.0.108.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\..\solution\packages\System.Data.SQLite.Core.1.0.108.0\build\net46\System.Data.SQLite.Core.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

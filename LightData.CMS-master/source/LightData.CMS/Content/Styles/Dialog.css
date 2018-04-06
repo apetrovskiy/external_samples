@@ -1,0 +1,71 @@
+﻿.dim {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.51);
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    display: inline-block;
+}
+
+.lightDataDialog {
+    z-index: 101;
+    min-width: 300px;
+    min-height: 130px;
+    background: white;
+    border-radius: 5px;
+    border:1px solid #CCC;
+    /*overflow: hidden;*/
+}
+
+    .lightDataDialog > nav {
+        position: relative;
+        display: block;
+        width: 98%;
+        height: 90%;
+        margin-top: 5px;
+        clear: both;
+        padding-left: 5px;
+        margin-bottom: 11px;
+    }
+
+    .lightDataDialog > h1 {
+        width: auto !important;
+        margin: 0;
+        padding: 10px;
+        border-bottom: 1px solid #CCC;
+        background: #337ab7;
+        color: white;
+        /* min-width: 97.8%; */
+        border-radius: 5px;
+    }
+
+        .lightDataDialog > h1 > span.disabled {
+            /*color: #dddddd;*/
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36zwjjgzhhYWGMYAEYB8RmROaABADeOQ8CXl/xfgAAAABJRU5ErkJggg==) repeat;
+        }
+
+        .lightDataDialog > h1 > span {
+            float: right;
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            /*border: 1px solid #CCC;*/
+            border-radius: 2px;
+            padding: 1px;
+            padding-left: 6px;
+            top: -2px;
+            padding-right: 6px;
+            margin-left: 5px;
+        }
+
+            .lightDataDialog > h1 > span.cancel:hover {
+                background: red !important;
+                box-shadow: 0px 0px 1px 1px #CCC;
+            }
+
+            .lightDataDialog > h1 > span:hover:not(.disabled) {
+                box-shadow: 0px 0px 1px 1px #CCC;
+            }

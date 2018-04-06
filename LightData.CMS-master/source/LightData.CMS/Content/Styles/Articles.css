@@ -1,0 +1,49 @@
+﻿.articles {
+    width: 99%;
+    min-height: 200px;
+    max-height: 500px;
+    display: inline-block;
+    margin: auto;
+    position: relative;
+    border: 1px solid #CCC;
+    margin-left: 3px;
+    margin-top: 4px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+    .articles > h2 {
+        width: 100%;
+        padding: 10px;
+        border-bottom: 1px solid #CCC;
+        font-weight: bold;
+        background: #337ab7;
+        color: white;
+    }
+
+    .articles > table {
+        width: 100%;
+    }
+
+        .articles > table tbody tr td, .articles > table thead th {
+            text-align: left;
+            padding: 5px;
+        }
+
+            .articles > table thead th:last-child, .articles > table thead th:first-child {
+                border-right: none !important;
+                width: 11px;
+            }
+
+        .articles > table thead th {
+            background: #323232;
+            color: white;
+            font-size: 15px;
+            border-right: 1px solid white;
+        }
+
+
+iframe {
+    width: 99%;
+    height: 99%;
+}

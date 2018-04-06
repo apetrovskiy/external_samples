@@ -1,0 +1,39 @@
+﻿@using System.Web.Optimization
+@model int?
+@{
+    ViewBag.Title = "LightDataCMS-Login";
+    @Styles.Render("~/bundles/css")
+    @Scripts.Render("~/bundles/jquery")
+}
+
+
+@using (Html.BeginForm("Login", "Account", FormMethod.Post))
+{
+    <div id="loginView">
+        <h2>Login</h2>
+        <div class="inputContainer">
+            <label>UserName:</label>
+            <input type="text" name="userName" />
+
+            <label>Password:</label>
+            <input type="password" name="password" />
+
+            <label>RememberMe:</label>
+            <input type="checkbox" name="isPersistent" checked="checked" />
+
+            <input type="submit" value="login" />
+        </div>
+        @if (Model == 0)
+        {
+            <div class="error">Incorrect UserName or Password please try agen</div>
+        }
+
+    </div>
+}
+
+
+<script>
+    $(document).ready(function () {
+        $("#loginView").center(true);
+    })
+</script>

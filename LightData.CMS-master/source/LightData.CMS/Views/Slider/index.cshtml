@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Manage Slider";
+    Layout = "~/Views/_SharedLayout.cshtml";
+}
+
+<div class="sliderManager"> </div>
+<script>
+    $(document).ready(function () {
+        $(".sliderManager").sliderManager({
+            getUri: '@Url.Action("Get", "Slider")',
+            saveUri: '@Url.Action("Save", "Slider")',
+            deleteUri: '@Url.Action("Delete", "Slider")',
+            deleteSliderUri: '@Url.Action("DeleteSlider", "Slider")',
+            getImageUri: '@Url.Action("Get", "FileUploader")',
+            saveImageUri: '@Url.Action("Save", "FileUploader")',
+            deleteImageUri: '@Url.Action("Delete", "FileUploader")',
+            folderGetUri: '@Url.Action("GetFolders", "FileUploader")',
+            folderSaveUri: '@Url.Action("SaveFolder", "FileUploader")',
+            folderDeleteUri: '@Url.Action("DeleteFolder", "FileUploader")',
+            getImageFullUri: '@Url.Action("GetImage", "FileUploader",new { }, this.Request.Url.Scheme)',
+            saveFileItemUri: '@Url.Action("SaveFileItem", "FileUploader")',
+            getFoldersAutoFill: '@Url.Action("GetFoldersAutoFill", "FileUploader")'
+        });
+    });
+</script>

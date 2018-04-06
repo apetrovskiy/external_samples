@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LightData.CMS", "..\source\LightData.CMS\LightData.CMS.csproj", "{DAC723CE-F225-4007-8DDC-C7138C7D8278}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LightData.CMS.Modules", "..\source\LightData.CMS.Modules\LightData.CMS.Modules.csproj", "{3DDF3EF8-5AEF-4204-8699-07719BCF0EC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LightData.Auth", "..\source\LightData.Auth\LightData.Auth.csproj", "{B6BC282D-4C06-4E48-9700-9ED17A82C7E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LightDataTable.Site", "..\source\LightDataTable.Site\LightDataTable.Site.csproj", "{BA310F1D-4856-4C6F-8682-325CB2C2F0EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DAC723CE-F225-4007-8DDC-C7138C7D8278}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAC723CE-F225-4007-8DDC-C7138C7D8278}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAC723CE-F225-4007-8DDC-C7138C7D8278}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DAC723CE-F225-4007-8DDC-C7138C7D8278}.Debug|x64.Build.0 = Debug|Any CPU
+		{DAC723CE-F225-4007-8DDC-C7138C7D8278}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAC723CE-F225-4007-8DDC-C7138C7D8278}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAC723CE-F225-4007-8DDC-C7138C7D8278}.Release|x64.ActiveCfg = Release|Any CPU
+		{DAC723CE-F225-4007-8DDC-C7138C7D8278}.Release|x64.Build.0 = Release|Any CPU
+		{3DDF3EF8-5AEF-4204-8699-07719BCF0EC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DDF3EF8-5AEF-4204-8699-07719BCF0EC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DDF3EF8-5AEF-4204-8699-07719BCF0EC2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3DDF3EF8-5AEF-4204-8699-07719BCF0EC2}.Debug|x64.Build.0 = Debug|Any CPU
+		{3DDF3EF8-5AEF-4204-8699-07719BCF0EC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DDF3EF8-5AEF-4204-8699-07719BCF0EC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DDF3EF8-5AEF-4204-8699-07719BCF0EC2}.Release|x64.ActiveCfg = Release|Any CPU
+		{3DDF3EF8-5AEF-4204-8699-07719BCF0EC2}.Release|x64.Build.0 = Release|Any CPU
+		{B6BC282D-4C06-4E48-9700-9ED17A82C7E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6BC282D-4C06-4E48-9700-9ED17A82C7E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6BC282D-4C06-4E48-9700-9ED17A82C7E4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B6BC282D-4C06-4E48-9700-9ED17A82C7E4}.Debug|x64.Build.0 = Debug|Any CPU
+		{B6BC282D-4C06-4E48-9700-9ED17A82C7E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6BC282D-4C06-4E48-9700-9ED17A82C7E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6BC282D-4C06-4E48-9700-9ED17A82C7E4}.Release|x64.ActiveCfg = Release|Any CPU
+		{B6BC282D-4C06-4E48-9700-9ED17A82C7E4}.Release|x64.Build.0 = Release|Any CPU
+		{BA310F1D-4856-4C6F-8682-325CB2C2F0EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA310F1D-4856-4C6F-8682-325CB2C2F0EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA310F1D-4856-4C6F-8682-325CB2C2F0EC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BA310F1D-4856-4C6F-8682-325CB2C2F0EC}.Debug|x64.Build.0 = Debug|Any CPU
+		{BA310F1D-4856-4C6F-8682-325CB2C2F0EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA310F1D-4856-4C6F-8682-325CB2C2F0EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA310F1D-4856-4C6F-8682-325CB2C2F0EC}.Release|x64.ActiveCfg = Release|Any CPU
+		{BA310F1D-4856-4C6F-8682-325CB2C2F0EC}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00F43439-EE1D-4906-9AC0-1D23E897E654}
+	EndGlobalSection
+EndGlobal

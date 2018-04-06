@@ -1,0 +1,53 @@
+﻿@using LightDataTable.Site.Helpers;
+@using LightData.CMS.Modules.Repository;
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+
+    @Styles.Render("~/bundles/css")
+    @Scripts.Render("~/bundles/jquery")
+    @{
+        var theme = System.Configuration.ConfigurationManager.AppSettings["Theme"];
+        foreach (var file in new LightData.CMS.Modules.Repository.Repository().Get
+        <LightData.CMS.Modules.Library.FileItem>
+            ().Where(x => (x.Folder.Name == theme || x.Folder.Children.Any(a => a.Name == theme)) &&
+            x.FileType == LightData.CMS.Modules.Helper.EnumHelper.AllowedFiles.CSS || x.FileType == LightData.CMS.Modules.Helper.EnumHelper.AllowedFiles.JAVASCRIPT).Execute())
+        {
+            if (file.FileType.ToString() == "JAVASCRIPT")
+            {
+                <script type="text/javascript" name='@file.FileName' src='@Url.Action("LoadFiles", "Home", new { }, this.Request.Url.Scheme)?fileId=@file.Id'></script>
+            }
+            else
+            {
+                <link class="ExternalCss" name='@file.FileName' href='@Url.Action("LoadFiles", "Home", new { }, this.Request.Url.Scheme)?fileId=@file.Id' rel="stylesheet" />
+            }
+        }
+    }
+    <script>
+    var globalSettings =
+    {
+    setValue: '@Url.Action("SetValue", "Home")',
+    getValue: '@Url.Action("GetValue", "Home")',
+    htmlFormater: '@Url.Action("HtmlFormater", "Home", new { }, this.Request.Url.Scheme)',
+    };
+    </script>
+</head>
+<body>
+    <div id="siteContainer">
+        <div id="cssmenu">
+            @Html.Tag(LightData.CMS.Modules.Helper.EnumHelper.Tags.TopMenu)
+        </div>
+        <div id="centerContent">
+            @RenderBody()
+        </div>
+        @Html.Tag(LightData.CMS.Modules.Helper.EnumHelper.Tags.Footer)
+    </div>
+
+    <script>
+
+
+    </script>
+</body>
+</html>

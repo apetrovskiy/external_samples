@@ -1,0 +1,108 @@
+﻿.sliderManager {
+    margin-top: 4px;
+    display: block;
+    margin-left: 3px;
+}
+
+    .sliderManager .lightDataCheckBox {
+        float: left;
+        top: 1px;
+    }
+
+        .sliderManager .lightDataCheckBox span.box {
+            width: 10px;
+            height: 11px;
+            border-radius: 0;
+        }
+
+    .sliderManager .ItemAdder {
+        background-size: 120% 109%;
+        background-position: center;
+        cursor: pointer;
+        background-image: url("data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgY2xhc3M9IiI+PGcgdHJhbnNmb3JtPSJtYXRyaXgoMS4wODIzMiAwIDAgMS4wODIzMiAtMjEuMDcyNyAtMjEuMDcyNykiPjxwYXRoIHN0eWxlPSJmaWxsOiM5OTk5OTk7IiBkPSJNNTEyLDBoLTQwdjE2aDI0djMyaDE2VjB6IE00MzIsMGgtNDB2MTZoNDBWMHogTTM1MiwwaC00MHYxNmg0MFYweiBNMjcyLDBoLTQwdjE2aDQwVjB6IE0xOTIsMGgtNDAgIHYxNmg0MFYweiBNMTEyLDBINzJ2MTZoNDBWMHogTTMyLDBIMHYxNmgzMlYweiBNMTYsNDhIMHY0MGgxNlY0OHogTTE2LDEyOEgwdjQwaDE2VjEyOHogTTE2LDIwOEgwdjQwaDE2VjIwOHogTTE2LDI4OEgwdjQwaDE2VjI4OHogICBNMTYsMzY4SDB2NDBoMTZWMzY4eiBNMTYsNDQ4SDB2NDBoMTZWNDQ4eiBNNTYsNDk2SDE2djE2aDQwVjQ5NnogTTEzNiw0OTZIOTZ2MTZoNDBWNDk2eiBNMjE2LDQ5NmgtNDB2MTZoNDBWNDk2eiBNMjk2LDQ5NmgtNDB2MTYgIGg0MFY0OTZ6IE0zNzYsNDk2aC00MHYxNmg0MFY0OTZ6IE00NTYsNDk2aC00MHYxNmg0MFY0OTZ6IE01MTIsNDg4aC0xNnY4bDAsMHYxNmgxNlY0ODh6IE01MTIsNDA4aC0xNnY0MGgxNlY0MDh6IE01MTIsMzI4aC0xNnY0MCAgaDE2VjMyOHogTTUxMiwyNDhoLTE2djQwaDE2VjI0OHogTTUxMiwxNjhoLTE2djQwaDE2VjE2OHogTTUxMiw4OGgtMTZ2NDBoMTZWODh6IiBkYXRhLW9yaWdpbmFsPSIjOTk5OTk5IiBjbGFzcz0iIj48L3BhdGg+PGc+Cgk8cmVjdCB4PSIyNDQiIHk9IjE3NS45NzYiIHN0eWxlPSJmaWxsOiMzQTM5MzkiIHdpZHRoPSIyNCIgaGVpZ2h0PSIxNjAuMDgiIGRhdGEtb3JpZ2luYWw9IiNFMjFCMUIiIGNsYXNzPSJhY3RpdmUtcGF0aCIgZGF0YS1vbGRfY29sb3I9IiNFMjFCMUIiPjwvcmVjdD4KCTxyZWN0IHg9IjE3NS45NzYiIHk9IjI0NCIgc3R5bGU9ImZpbGw6IzNBMzkzOSIgd2lkdGg9IjE2MC4wOCIgaGVpZ2h0PSIyNCIgZGF0YS1vcmlnaW5hbD0iI0UyMUIxQiIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBkYXRhLW9sZF9jb2xvcj0iI0UyMUIxQiI+PC9yZWN0Pgo8L2c+PC9nPiA8L3N2Zz4=");
+    }
+
+
+        .sliderManager .ItemAdder:hover {
+            background-color: #00000012;
+        }
+
+    .sliderManager ul {
+        display: inline-block;
+        list-style: none;
+        width: 100%;
+        overflow: hidden;
+    }
+
+        .sliderManager ul > li {
+            width: 99%;
+            padding: 5px;
+            border: 1px solid #CCC;
+            padding-left: 16px;
+            overflow: hidden;
+        }
+
+            .sliderManager ul > li > ul {
+                width: 99%;
+                border: 1px solid #CCC;
+                margin-left: 13px;
+                display: none;
+                background: #ddd;
+                border-radius: 5px;
+                padding: 2px;
+                zoom: 1;
+                position: relative;
+                overflow: hidden;
+            }
+
+                .sliderManager ul > li > ul li {
+                    width: 100px;
+                    height: 106px;
+                    display: inline-block;
+                    float: left;
+                    margin: 2px;
+                    border-radius: 6px;
+                    padding: 0;
+                    border: 1px dotted;
+                    border-style: dashed;
+                    overflow: hidden;
+                }
+
+                    .sliderManager ul > li > ul li.selected img, .sliderManager ul > li > ul li.selected span {
+                        opacity: 0.2;
+                    }
+                    .sliderManager ul > li > ul li.selected {
+                        content: "";
+                        background-size: 100% 100%;
+                        background-color:#33a368;
+                        background-image: url("data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNzAgNzAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDcwIDcwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIGNsYXNzPSIiPjxnPjxnPgoJPGc+CgkJPGc+CgkJCTxwYXRoIHN0eWxlPSJmaWxsOiNGQ0Y4RkQiIGQ9Ik0yNi40NzQsNzBjLTIuMTc2LDAtNC4yMzQtMS4wMTgtNS41NTctMi43NjRMMy4wNDksNDMuNjM5QzAuNzI1LDQwLjU3LDEuMzMsMzYuMiw0LjM5OSwzMy44NzUgICAgIGMzLjA3NC0yLjMyNiw3LjQ0MS0xLjcxNyw5Ljc2NiwxLjM1bDExLjc1MiwxNS41MThMNTUuNDc0LDMuMjg1YzIuMDM1LTMuMjY1LDYuMzMyLTQuMjY0LDkuNjA0LTIuMjMyICAgICBjMy4yNjgsMi4wMzQsNC4yNjYsNi4zMzQsMi4yMyw5LjYwMmwtMzQuOTE2LDU2LjA2Yy0xLjIxMywxLjk0OS0zLjMwNywzLjE3NS01LjYsMy4yNzlDMjYuNjg1LDY5Ljk5OCwyNi41OCw3MCwyNi40NzQsNzB6IiBkYXRhLW9yaWdpbmFsPSIjMDMwMTA0IiBjbGFzcz0iYWN0aXZlLXBhdGgiIGRhdGEtb2xkX2NvbG9yPSIjRkFGNEZCIj48L3BhdGg+CgkJPC9nPgoJPC9nPgo8L2c+PC9nPiA8L3N2Zz4=");
+                    }
+
+                    .sliderManager ul > li > ul li img {
+                        width: 100%;
+                        height: 82%;
+                    }
+
+                    .sliderManager ul > li > ul li span {
+                        display: inline-block;
+                        width: 100%;
+                        height: 100%;
+                        color: #272626;
+                        background: white;
+                        text-align: center;
+                        position: relative;
+                        top: -3px;
+                        padding-top: 4px;
+                        font-size: 12px;
+                    }
+
+            .sliderManager ul > li > span:first-child {
+                float: left;
+                position: relative;
+                top: 1px;
+                left: -7px;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                font-size: 0;
+            }
